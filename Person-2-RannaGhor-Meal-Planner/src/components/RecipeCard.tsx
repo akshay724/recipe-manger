@@ -9,7 +9,7 @@ interface RecipeCardProps {
 }
 
 export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, featuredLayout = false }) => {
-  const { setSelectedRecipe, isFavorite, toggleFavorite, addRecipeToMealPlan } = useApp();
+  const { setSelectedRecipe, isFavorite, toggleFavorite, addRecipeToMealPlan, language } = useApp();
   const [showMealPlanPicker, setShowMealPlanPicker] = useState(false);
   const [selectedDay, setSelectedDay] = useState<WeekDays>('Monday');
   const [selectedSlot, setSelectedSlot] = useState<'breakfast' | 'lunch' | 'snack' | 'dinner'>('lunch');
@@ -58,7 +58,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, featuredLayout =
             <span className={`w-1.5 h-1.5 rounded-full ${isVeg ? 'bg-emerald-600' : 'bg-sindoor-700'}`}></span>
           </span>
           <span className="text-[11px] font-semibold text-charcoal/80">
-            {isVeg ? 'নিরামিষ' : 'আমিষ'}
+            {language === 'bn' ? (isVeg ? 'নিরামিষ' : 'আমিষ') : (isVeg ? 'Veg' : 'Non-Veg')}
           </span>
         </div>
 
@@ -94,10 +94,10 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, featuredLayout =
           <div className="flex items-start justify-between gap-2 mb-1.5">
             <div>
               <h3 className="text-lg font-serif font-bold text-sindoor-900 group-hover:text-sindoor-700 transition-colors leading-snug">
-                {recipe.name}
+                {language === 'bn' ? (recipe.bengaliName || recipe.name) : recipe.name}
               </h3>
               <p className="font-bengali text-sm font-semibold text-terracotta-700 tracking-wide">
-                {recipe.bengaliName}
+                {language === 'bn' ? recipe.name : recipe.bengaliName}
               </p>
             </div>
             {recipe.isTraditional && (
@@ -116,15 +116,17 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, featuredLayout =
           <div className="grid grid-cols-3 gap-2 py-2.5 px-3 rounded-2xl bg-cream-50 border border-terracotta-100 text-charcoal/80 text-[11px] font-medium mb-4">
             <div className="flex items-center space-x-1.5" title="Total cooking time">
               <Clock className="w-3.5 h-3.5 text-terracotta-600" />
-              <span>{recipe.totalTimeMinutes}m</span>
+              <span>{recipe.totalTimeMinutes} {language === 'bn' ? 'মি.' : 'm'}</span>
             </div>
             <div className="flex items-center space-x-1.5" title="Base servings">
               <Users className="w-3.5 h-3.5 text-terracotta-600" />
-              <span>{recipe.baseServings} serv</span>
+              <span>{recipe.baseServings} {language === 'bn' ? 'জন' : 'serv'}</span>
             </div>
             <div className="flex items-center space-x-1" title={`Spice level: ${recipe.spiceLevel}`}>
               <Flame className={`w-3.5 h-3.5 ${recipe.spiceLevel === 'Spicy' ? 'text-sindoor-600 fill-sindoor-600' : 'text-amber-500'}`} />
-              <span className="text-[10px]">{recipe.spiceLevel}</span>
+              <span className="text-[10px]">
+                {language === 'bn' ? (recipe.spiceLevel === 'Spicy' ? 'ঝাল' : recipe.spiceLevel === 'Medium' ? 'মাঝারি' : 'হালকা') : recipe.spiceLevel}
+              </span>
             </div>
           </div>
         </div>
@@ -135,7 +137,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, featuredLayout =
             onClick={() => setSelectedRecipe(recipe)}
             className="flex-1 py-2 px-3 rounded-xl bg-cream-100 hover:bg-cream-200 text-sindoor-900 text-xs font-semibold transition-colors text-center"
           >
-            View Recipe
+            {language === 'bn' ? 'রেসিপি দেখুন' : 'View Recipe'}
           </button>
 
           <button
@@ -147,7 +149,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, featuredLayout =
             title="Add to weekly meal plan"
           >
             <Plus className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Add to Plan</span>
+            <span className="hidden sm:inline">{language === 'bn' ? 'রুটিনে যোগ' : 'Add to Plan'}</span>
           </button>
         </div>
 
@@ -158,7 +160,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, featuredLayout =
             onClick={(e) => e.stopPropagation()}
           >
             <div className="text-xs font-bold text-sindoor-900 mb-2 flex items-center justify-between">
-              <span>Add to Meal Planner</span>
+              <span>{language === 'bn' ? 'খাবারের রুটিনে যোগ করুন' : 'Add to Meal Planner'}</span>
               <button 
                 onClick={() => setShowMealPlanPicker(false)}
                 className="text-charcoal/40 hover:text-charcoal font-normal"
@@ -169,7 +171,9 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, featuredLayout =
 
             <div className="grid grid-cols-2 gap-2 mb-3">
               <div>
-                <label className="text-[10px] font-semibold text-charcoal/70 block mb-1">Day</label>
+                <label className="text-[10px] font-semibold text-charcoal/70 block mb-1">
+                  {language === 'bn' ? 'বার / দিন' : 'Day'}
+                </label>
                 <select
                   value={selectedDay}
                   onChange={(e) => setSelectedDay(e.target.value as WeekDays)}
@@ -182,7 +186,9 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, featuredLayout =
               </div>
 
               <div>
-                <label className="text-[10px] font-semibold text-charcoal/70 block mb-1">Meal Slot</label>
+                <label className="text-[10px] font-semibold text-charcoal/70 block mb-1">
+                  {language === 'bn' ? 'আহারের সময়' : 'Meal Slot'}
+                </label>
                 <select
                   value={selectedSlot}
                   onChange={(e) => setSelectedSlot(e.target.value as any)}
@@ -208,10 +214,10 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, featuredLayout =
               {addedSuccess ? (
                 <>
                   <Check className="w-3.5 h-3.5" />
-                  <span>Added to {selectedDay}!</span>
+                  <span>{language === 'bn' ? `${selectedDay}-এ যোগ সম্পন্ন!` : `Added to ${selectedDay}!`}</span>
                 </>
               ) : (
-                <span>Confirm Add</span>
+                <span>{language === 'bn' ? 'নিশ্চিত করুন' : 'Confirm Add'}</span>
               )}
             </button>
           </div>

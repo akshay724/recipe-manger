@@ -47,7 +47,7 @@ export const HeroSection: React.FC = () => {
           
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-mustard-100 border border-mustard-300 text-sindoor-900 text-xs font-bold tracking-wide shadow-xs animate-fadeIn">
             <span className="w-2 h-2 rounded-full bg-sindoor-600 animate-ping"></span>
-            <span>Welcome to RannaGhor • রান্নাঘরের ডিজিটাল সহচর</span>
+            <span>{language === 'bn' ? 'স্বাগতম RannaGhor • রান্নাঘরের ডিজিটাল সহচর' : 'Welcome to RannaGhor • Bengali Kitchen Companion'}</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-sindoor-950 tracking-tight leading-[1.15]">
@@ -84,7 +84,10 @@ export const HeroSection: React.FC = () => {
           {/* Quick Search Chips */}
           <div className="pt-3 flex flex-wrap items-center justify-center gap-2 text-xs">
             <span className="text-charcoal/50 font-medium">{t('quickSearch')}:</span>
-            {['Ilish', 'Posto', 'Chingri', 'Kosha Mangsho', 'Luchi', 'Mishti'].map(term => (
+            {(language === 'bn' 
+              ? ['ইলিশ', 'পোস্ত', 'চিংড়ি', 'কষা মাংস', 'লুচি', 'মিষ্টি'] 
+              : ['Ilish', 'Posto', 'Chingri', 'Kosha Mangsho', 'Luchi', 'Mishti']
+            ).map(term => (
               <button
                 key={term}
                 onClick={() => handleHeroSearch(term)}
@@ -123,15 +126,15 @@ export const HeroSection: React.FC = () => {
                   <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-mustard-300 mb-2 shadow-xs group-hover:border-sindoor-600 transition-colors">
                     <img
                       src={rec.image}
-                      alt={item.label}
+                      alt={language === 'bn' ? item.bengali : item.label}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                   <span className="text-xs font-bold text-charcoal group-hover:text-sindoor-800 transition-colors">
-                    {item.label}
+                    {language === 'bn' ? item.bengali : item.label}
                   </span>
                   <span className="font-bengali text-[10px] text-terracotta-600 font-medium mt-0.5">
-                    {item.bengali}
+                    {language === 'bn' ? item.label : item.bengali}
                   </span>
                 </div>
               );

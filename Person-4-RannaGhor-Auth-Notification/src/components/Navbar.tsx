@@ -46,15 +46,20 @@ export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showSearchInput, setShowSearchInput] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
+  const [showMoreDropdown, setShowMoreDropdown] = useState(false);
   const userDropdownRef = useRef<HTMLDivElement>(null);
+  const moreDropdownRef = useRef<HTMLDivElement>(null);
 
   const unreadEmailCount = emails.filter(e => !e.read).length;
 
-  // Close dropdown on outside click
+  // Close dropdowns on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (userDropdownRef.current && !userDropdownRef.current.contains(event.target as Node)) {
         setShowUserDropdown(false);
+      }
+      if (moreDropdownRef.current && !moreDropdownRef.current.contains(event.target as Node)) {
+        setShowMoreDropdown(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -66,17 +71,35 @@ export const Navbar: React.FC = () => {
   const handleNavClick = (tab: string) => {
     setActiveTab(tab);
     setMobileMenuOpen(false);
+    setShowMoreDropdown(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const navItems = [
+  const primaryNavItems = [
+    { id: 'home', label: language === 'bn' ? 'মূলপাতা' : 'Home' },
+    { id: 'recipes', label: language === 'bn' ? 'রেসিপি' : 'Recipes' },
+    { id: 'planner', label: language === 'bn' ? 'রুটিন' : 'Planner' },
+    { id: 'shopping', label: language === 'bn' ? 'ফর্দ' : 'Bazaar', badge: uncheckedShoppingCount },
+  ];
+
+  const secondaryNavItems = [
+    { id: 'what-can-i-cook', label: language === 'bn' ? 'কী রাঁধব আজ?' : 'What Can I Cook?', icon: Flame, highlight: true },
+    { id: 'pantry', label: language === 'bn' ? 'রান্নাঘরের ভাঁড়ার' : 'Pantry & Freshness', icon: Archive, badge: expiringSoonPantryItems.length },
+    { id: 'festivals', label: language === 'bn' ? 'উৎসবের ভোজ' : 'Festivals & Feasts', icon: Sparkles },
+    { id: 'seasonal', label: language === 'bn' ? 'ঋতুভেদে রান্না' : 'Seasonal Dishes', icon: Sun },
+    { id: 'my-recipes', label: language === 'bn' ? 'আমার নিজস্ব রান্না' : 'My Custom Recipes', icon: PlusCircle },
+    { id: 'favorites', label: language === 'bn' ? 'পছন্দের রেসিপি' : 'Favorite Recipes', icon: Heart, badge: favorites.length },
+    { id: 'dashboard', label: language === 'bn' ? 'হেঁশেল ড্যাশবোর্ড' : 'Kitchen Dashboard', icon: ChefHat },
+  ];
+
+  const allMobileNavItems = [
     { id: 'home', label: language === 'bn' ? 'মূলপাতা' : 'Home', bengali: 'মূলপাতা', icon: ChefHat },
     { id: 'recipes', label: language === 'bn' ? 'রেসিপি সম্ভার' : 'Recipes', bengali: 'রেসিপি সম্ভার', icon: BookOpen },
     { id: 'planner', label: language === 'bn' ? 'সাপ্তাহিক রুটিন' : 'Meal Planner', bengali: 'সাপ্তাহিক রুটিন', icon: CalendarDays },
-    { id: 'my-recipes', label: language === 'bn' ? 'আমার রান্না' : 'My Recipes', bengali: 'আমার রান্না', icon: PlusCircle },
-    { id: 'pantry', label: language === 'bn' ? 'ভাঁড়ার ঘর' : 'Pantry', bengali: 'রান্নাঘরের রসদ', icon: Archive, badge: expiringSoonPantryItems.length },
+    { id: 'what-can-i-cook', label: language === 'bn' ? 'কী রাঁধব আজ?' : 'What Can I Cook?', bengali: 'কী রাঁধব?', icon: Flame },
     { id: 'shopping', label: language === 'bn' ? 'বাজারের ফর্দ' : 'Shopping List', bengali: 'বাজারের ফর্দ', icon: ShoppingBag, badge: uncheckedShoppingCount },
-    { id: 'what-can-i-cook', label: language === 'bn' ? 'কী রাঁধব আজ?' : 'What Can I Cook?', bengali: 'কী রাঁধব?', icon: Flame, highlight: true },
+    { id: 'pantry', label: language === 'bn' ? 'ভাঁড়ার ঘর' : 'Pantry', bengali: 'রান্নাঘরের রসদ', icon: Archive, badge: expiringSoonPantryItems.length },
+    { id: 'my-recipes', label: language === 'bn' ? 'আমার রান্না' : 'My Recipes', bengali: 'আমার রান্না', icon: PlusCircle },
     { id: 'festivals', label: language === 'bn' ? 'উৎসবের ভোজ' : 'Festivals', bengali: 'উৎসবের ভোজ', icon: Sparkles },
     { id: 'seasonal', label: language === 'bn' ? 'ঋতুভেদে রান্না' : 'Seasonal', bengali: 'ঋতুভেদে রান্না', icon: Sun },
   ];
@@ -87,8 +110,8 @@ export const Navbar: React.FC = () => {
         {/* Cultural top accent line inspired by sindoor and mustard */}
         <div className="h-1 w-full bg-gradient-to-r from-sindoor-700 via-mustard-500 to-terracotta-600"></div>
 
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
-          <div className="flex items-center justify-between h-16 sm:h-20 w-full min-w-0">
+        <div className="max-w-[1536px] mx-auto px-3 sm:px-6 lg:px-8 w-full">
+          <div className="flex items-center justify-between h-16 sm:h-20 w-full min-w-0 gap-2">
             
             {/* Logo and Tagline */}
             <div 
@@ -100,7 +123,7 @@ export const Navbar: React.FC = () => {
               </div>
               <div className="flex flex-col min-w-0">
                 <div className="flex items-baseline space-x-1.5 sm:space-x-2">
-                  <span className="text-xl sm:text-2xl font-serif font-bold tracking-tight text-sindoor-900 group-hover:text-sindoor-700 transition-colors">
+                  <span className="text-lg sm:text-2xl font-serif font-bold tracking-tight text-sindoor-900 group-hover:text-sindoor-700 transition-colors">
                     RannaGhor
                   </span>
                   <span className="font-bengali text-[11px] sm:text-xs font-semibold text-terracotta-600 tracking-wide">
@@ -113,9 +136,9 @@ export const Navbar: React.FC = () => {
               </div>
             </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden xl:flex items-center space-x-1 shrink min-w-0">
-              {navItems.slice(0, 6).map((item) => {
+            {/* Desktop Navigation - Clean, Streamlined & Collision-Free */}
+            <nav className="hidden lg:flex items-center space-x-1 shrink-0">
+              {primaryNavItems.map((item) => {
                 const isActive = activeTab === item.id;
                 return (
                   <button
@@ -129,7 +152,7 @@ export const Navbar: React.FC = () => {
                   >
                     <span>{item.label}</span>
                     {item.badge ? (
-                      <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-bold text-white ${item.id === 'pantry' ? 'bg-amber-600' : 'bg-sindoor-700'}`}>
+                      <span className="px-1.5 py-0.2 rounded-full text-[10px] font-bold text-white bg-sindoor-700 ml-0.5">
                         {item.badge}
                       </span>
                     ) : null}
@@ -137,9 +160,7 @@ export const Navbar: React.FC = () => {
                 );
               })}
 
-              {/* Special Bengali Features Dropdown / Quick Links */}
-              <div className="h-4 w-[1px] bg-terracotta-200 mx-1"></div>
-
+              {/* Instant "What to Cook" highlight button */}
               <button
                 onClick={() => handleNavClick('what-can-i-cook')}
                 className={`px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center space-x-1 whitespace-nowrap ${
@@ -149,36 +170,65 @@ export const Navbar: React.FC = () => {
                 }`}
               >
                 <Flame className="w-3.5 h-3.5 text-sindoor-700 fill-sindoor-700 shrink-0" />
-                <span>{language === 'bn' ? 'কী রাঁধব আজ?' : 'কী রাঁধব?'}</span>
+                <span>{language === 'bn' ? 'কী রাঁধব আজ?' : 'What to Cook?'}</span>
               </button>
 
-              <button
-                onClick={() => handleNavClick('festivals')}
-                className={`hidden 2xl:block px-2.5 py-1.5 rounded-xl text-xs font-medium transition-all whitespace-nowrap ${
-                  activeTab === 'festivals' ? 'text-sindoor-800 font-bold bg-cream-200' : 'text-charcoal/70 hover:text-sindoor-800'
-                }`}
-              >
-                {t('festivals')}
-              </button>
+              {/* Dedicated "More ▾ / আরও ▾" Dropdown */}
+              <div className="relative" ref={moreDropdownRef}>
+                <button
+                  onClick={() => setShowMoreDropdown(!showMoreDropdown)}
+                  className={`px-2.5 py-1.5 rounded-xl text-xs xl:text-sm font-medium transition-all duration-200 flex items-center space-x-1 whitespace-nowrap ${
+                    showMoreDropdown || ['pantry', 'festivals', 'seasonal', 'my-recipes', 'favorites', 'dashboard'].includes(activeTab)
+                      ? 'bg-cream-200 text-sindoor-900 font-semibold shadow-xs'
+                      : 'text-charcoal/80 hover:text-sindoor-800 hover:bg-cream-100'
+                  }`}
+                >
+                  <span>{language === 'bn' ? 'আরও ▾' : 'More ▾'}</span>
+                  {expiringSoonPantryItems.length > 0 && (
+                    <span className="w-2 h-2 rounded-full bg-amber-600 animate-pulse"></span>
+                  )}
+                </button>
 
-              <button
-                onClick={() => handleNavClick('seasonal')}
-                className={`hidden 2xl:block px-2.5 py-1.5 rounded-xl text-xs font-medium transition-all whitespace-nowrap ${
-                  activeTab === 'seasonal' ? 'text-sindoor-800 font-bold bg-cream-200' : 'text-charcoal/70 hover:text-sindoor-800'
-                }`}
-              >
-                {t('seasonal')}
-              </button>
+                {showMoreDropdown && (
+                  <div className="absolute left-0 mt-2 w-56 rounded-2xl bg-white border border-terracotta-200 shadow-xl py-2 z-50 animate-fadeIn text-charcoal">
+                    {secondaryNavItems.map((item) => {
+                      const Icon = item.icon;
+                      const isActive = activeTab === item.id;
+                      return (
+                        <button
+                          key={item.id}
+                          onClick={() => handleNavClick(item.id)}
+                          className={`w-full px-4 py-2.5 text-left text-xs font-medium flex items-center justify-between transition-colors ${
+                            isActive
+                              ? 'bg-sindoor-50 text-sindoor-900 font-semibold'
+                              : 'hover:bg-cream-100 text-charcoal/85'
+                          }`}
+                        >
+                          <div className="flex items-center space-x-2.5">
+                            <Icon className={`w-4 h-4 ${isActive ? 'text-sindoor-700' : 'text-terracotta-600'}`} />
+                            <span>{item.label}</span>
+                          </div>
+                          {item.badge ? (
+                            <span className={`px-1.5 py-0.5 rounded-full text-[10px] font-bold text-white ${item.id === 'pantry' ? 'bg-amber-600' : 'bg-sindoor-700'}`}>
+                              {item.badge}
+                            </span>
+                          ) : null}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             </nav>
 
-            {/* Right Action Icons */}
-            <div className="flex items-center space-x-1 sm:space-x-2 shrink-0">
+            {/* Right Action Icons - Clean, Non-colliding spacing */}
+            <div className="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
               
               {/* Language Switcher Button (English / বাংলা) */}
-              <div className="flex items-center bg-cream-100 rounded-xl p-0.5 sm:p-1 border border-terracotta-200 shadow-2xs">
+              <div className="flex items-center bg-cream-100 rounded-xl p-0.5 sm:p-1 border border-terracotta-200 shadow-2xs shrink-0">
                 <button
                   onClick={() => setLanguage('en')}
-                  className={`px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-xs font-bold transition-all ${
+                  className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-xs font-bold transition-all ${
                     language === 'en'
                       ? 'bg-sindoor-700 text-white shadow-2xs'
                       : 'text-charcoal/70 hover:text-charcoal'
@@ -189,7 +239,7 @@ export const Navbar: React.FC = () => {
                 </button>
                 <button
                   onClick={() => setLanguage('bn')}
-                  className={`px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-xs font-bold font-bengali transition-all ${
+                  className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-xs font-bold font-bengali transition-all ${
                     language === 'bn'
                       ? 'bg-sindoor-700 text-white shadow-2xs'
                       : 'text-charcoal/70 hover:text-charcoal'
@@ -201,20 +251,20 @@ export const Navbar: React.FC = () => {
               </div>
 
               {/* Search Toggle / Input (Desktop/Tablet) */}
-              <div className="hidden md:block relative">
+              <div className="hidden md:block relative shrink-0">
                 {showSearchInput ? (
                   <div className="flex items-center bg-white rounded-full border border-terracotta-200 px-3 py-1.5 shadow-sm">
-                    <Search className="w-4 h-4 text-terracotta-500 mr-2 shrink-0" />
+                    <Search className="w-3.5 h-3.5 text-terracotta-500 mr-2 shrink-0" />
                     <input
                       type="text"
-                      placeholder="Search ilish, posto..."
+                      placeholder={language === 'bn' ? 'ইলিশ, পোস্ত...' : 'Search ilish, posto...'}
                       value={filters.searchQuery}
                       onChange={(e) => {
                         setFilters(prev => ({ ...prev, searchQuery: e.target.value }));
                         if (activeTab !== 'recipes') setActiveTab('recipes');
                       }}
                       autoFocus
-                      className="w-32 sm:w-44 text-xs focus:outline-none bg-transparent"
+                      className="w-28 sm:w-36 text-xs focus:outline-none bg-transparent"
                     />
                     <button 
                       onClick={() => setShowSearchInput(false)}
@@ -229,23 +279,23 @@ export const Navbar: React.FC = () => {
                       setShowSearchInput(true);
                       if (activeTab !== 'recipes') setActiveTab('recipes');
                     }}
-                    className="p-2 sm:p-2.5 rounded-full hover:bg-cream-200 text-charcoal/75 hover:text-sindoor-800 transition-colors"
+                    className="p-1.5 sm:p-2 rounded-full hover:bg-cream-200 text-charcoal/75 hover:text-sindoor-800 transition-colors"
                     title="Search recipes"
                   >
-                    <Search className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <Search className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
                   </button>
                 )}
               </div>
 
-              {/* Favorites Button (Desktop/Tablet, available in mobile drawer & bottom bar) */}
+              {/* Favorites Button */}
               <button
                 onClick={() => handleNavClick('favorites')}
-                className={`hidden sm:flex p-2 sm:p-2.5 rounded-full relative transition-colors ${
+                className={`hidden sm:flex p-1.5 sm:p-2 rounded-full relative transition-colors shrink-0 ${
                   activeTab === 'favorites' ? 'bg-sindoor-100 text-sindoor-800' : 'hover:bg-cream-200 text-charcoal/75 hover:text-sindoor-800'
                 }`}
                 title="Favorite Recipes"
               >
-                <Heart className={`w-4 h-4 sm:w-5 sm:h-5 ${favorites.length > 0 ? 'fill-sindoor-600 text-sindoor-600' : ''}`} />
+                <Heart className={`w-4 h-4 sm:w-4.5 sm:h-4.5 ${favorites.length > 0 ? 'fill-sindoor-600 text-sindoor-600' : ''}`} />
                 {favorites.length > 0 && (
                   <span className="absolute top-0.5 right-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-sindoor-700 text-white text-[9px] sm:text-[10px] font-bold flex items-center justify-center">
                     {favorites.length}
@@ -256,10 +306,10 @@ export const Navbar: React.FC = () => {
               {/* Email Notifications Button */}
               <button
                 onClick={() => setIsEmailInboxOpen(true)}
-                className="p-1.5 sm:p-2.5 rounded-full relative transition-colors hover:bg-cream-200 text-charcoal/75 hover:text-sindoor-800"
+                className="p-1.5 sm:p-2 rounded-full relative transition-colors hover:bg-cream-200 text-charcoal/75 hover:text-sindoor-800 shrink-0"
                 title={user ? `Google Account Emails (${user.email})` : "Email Notifications"}
               >
-                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                <Mail className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
                 {unreadEmailCount > 0 && (
                   <span className="absolute top-0 right-0 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-sindoor-700 text-white text-[9px] sm:text-[10px] font-bold flex items-center justify-center animate-pulse">
                     {unreadEmailCount}
@@ -267,13 +317,13 @@ export const Navbar: React.FC = () => {
                 )}
               </button>
 
-              {/* Add Recipe Action Button */}
+              {/* Add Recipe Action Button (Visible on wide screens) */}
               <button
                 onClick={() => setIsCreateRecipeOpen(true)}
-                className="hidden lg:flex items-center space-x-1.5 bg-sindoor-700 hover:bg-sindoor-800 text-white px-3 py-1.5 rounded-xl text-xs font-semibold shadow-xs transition-all hover:shadow"
+                className="hidden xl:flex items-center space-x-1.5 bg-sindoor-700 hover:bg-sindoor-800 text-white px-2.5 py-1.5 rounded-xl text-xs font-semibold shadow-xs transition-all hover:shadow shrink-0"
               >
                 <PlusCircle className="w-3.5 h-3.5" />
-                <span>{t('newRecipe')}</span>
+                <span>{language === 'bn' ? '+ রেসিপি' : '+ Recipe'}</span>
               </button>
 
               {/* Google Authentication & Profile Dropdown */}
@@ -513,7 +563,7 @@ export const Navbar: React.FC = () => {
             )}
 
             <div className="grid grid-cols-2 gap-2 mb-3">
-              {navItems.map((item) => {
+              {allMobileNavItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = activeTab === item.id;
                 return (
@@ -546,7 +596,7 @@ export const Navbar: React.FC = () => {
               className="w-full flex items-center justify-center space-x-2 bg-sindoor-700 text-white py-2.5 rounded-xl font-medium text-xs shadow-sm"
             >
               <PlusCircle className="w-4 h-4" />
-              <span>Create New Bengali Recipe</span>
+              <span>{language === 'bn' ? 'নতুন বাঙালি রেসিপি তৈরি করুন' : 'Create New Bengali Recipe'}</span>
             </button>
           </div>
         )}

@@ -16,18 +16,18 @@ import {
 import { AlpanaDivider } from './AlpanaDivider';
 
 export const RecipeDiscoveryView: React.FC = () => {
-  const { recipes, filters, setFilters, resetFilters } = useApp();
+  const { recipes, filters, setFilters, resetFilters, t, language } = useApp();
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
   // Filter options definitions
   const mealTypes: (MealType | 'All')[] = ['All', 'breakfast', 'lunch', 'dinner', 'snack', 'dessert'];
   const mealTypeLabels: Record<string, string> = {
-    'All': 'All Meals (সব)',
-    'breakfast': 'Breakfast (জলখাবার)',
-    'lunch': 'Lunch (দুপুর)',
-    'dinner': 'Dinner (রাত)',
-    'snack': 'Snack (টিফিন)',
-    'dessert': 'Dessert (মিষ্টি)'
+    'All': language === 'bn' ? 'সকল আহার' : 'All Meals (সব)',
+    'breakfast': language === 'bn' ? 'জলখাবার' : 'Breakfast (জলখাবার)',
+    'lunch': language === 'bn' ? 'দুপুরের খাবার' : 'Lunch (দুপুর)',
+    'dinner': language === 'bn' ? 'রাতের খাবার' : 'Dinner (রাত)',
+    'snack': language === 'bn' ? 'বিকেলের চা ও টিফিন' : 'Snack (টিফিন)',
+    'dessert': language === 'bn' ? 'মিষ্টি ও শেষপাত' : 'Dessert (মিষ্টি)'
   };
 
   const regions: (CuisineRegion | 'All')[] = [
@@ -139,10 +139,10 @@ export const RecipeDiscoveryView: React.FC = () => {
       {/* Search Header Banner */}
       <div className="text-center max-w-3xl mx-auto mb-8 space-y-3">
         <h1 className="text-3xl sm:text-5xl font-serif font-bold text-sindoor-950">
-          Bengali Recipe Discovery
+          {t('discoveryTitle')}
         </h1>
         <p className="text-xs sm:text-sm text-charcoal/70">
-          Explore heirloom classics, royal wedding curries, and comforting everyday meals across Bengal
+          {t('discoverySub')}
         </p>
 
         {/* Global Search Bar */}
@@ -151,7 +151,7 @@ export const RecipeDiscoveryView: React.FC = () => {
             <Search className="w-5 h-5 text-terracotta-500 mr-2.5 shrink-0" />
             <input
               type="text"
-              placeholder="Search for ilish, posto, chingri, mishti…"
+              placeholder={t('searchPlaceholder')}
               value={filters.searchQuery}
               onChange={(e) => setFilters(prev => ({ ...prev, searchQuery: e.target.value }))}
               className="w-full text-xs sm:text-sm bg-transparent focus:outline-none text-charcoal placeholder-charcoal/40"
@@ -161,7 +161,7 @@ export const RecipeDiscoveryView: React.FC = () => {
                 onClick={() => setFilters(prev => ({ ...prev, searchQuery: '' }))}
                 className="text-xs text-charcoal/40 hover:text-charcoal px-2"
               >
-                Clear
+                {language === 'bn' ? 'মুছুন' : 'Clear'}
               </button>
             )}
           </div>
@@ -175,7 +175,7 @@ export const RecipeDiscoveryView: React.FC = () => {
         <div className="flex items-center justify-between pb-3 border-b border-cream-200">
           <div className="flex items-center space-x-2 text-sindoor-900 font-bold text-sm">
             <Filter className="w-4 h-4 text-terracotta-600" />
-            <span>Refine Recipes by Traditional Categories</span>
+            <span>{t('filterTitle')}</span>
           </div>
 
           <div className="flex items-center space-x-3">
@@ -185,7 +185,7 @@ export const RecipeDiscoveryView: React.FC = () => {
                 className="flex items-center space-x-1 text-xs font-semibold text-sindoor-700 hover:text-sindoor-900"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
-                <span>Reset Filters</span>
+                <span>{t('resetFilters')}</span>
               </button>
             )}
 
@@ -193,7 +193,7 @@ export const RecipeDiscoveryView: React.FC = () => {
               onClick={() => setMobileFilterOpen(!mobileFilterOpen)}
               className="sm:hidden p-1.5 rounded-lg bg-cream-100 text-charcoal text-xs font-bold"
             >
-              {mobileFilterOpen ? 'Hide Filters' : 'Show Filters'}
+              {mobileFilterOpen ? (language === 'bn' ? 'ফিল্টার লুকান' : 'Hide Filters') : (language === 'bn' ? 'ফিল্টার দেখুন' : 'Show Filters')}
             </button>
           </div>
         </div>
@@ -203,7 +203,7 @@ export const RecipeDiscoveryView: React.FC = () => {
           
           {/* Meal Type */}
           <div>
-            <label className="text-[11px] font-bold text-charcoal/70 block mb-1">Meal Type</label>
+            <label className="text-[11px] font-bold text-charcoal/70 block mb-1">{t('mealType')}</label>
             <select
               value={filters.mealType}
               onChange={(e) => setFilters(prev => ({ ...prev, mealType: e.target.value as any }))}
@@ -217,7 +217,7 @@ export const RecipeDiscoveryView: React.FC = () => {
 
           {/* Cuisine / Region */}
           <div>
-            <label className="text-[11px] font-bold text-charcoal/70 block mb-1">Cuisine / Region</label>
+            <label className="text-[11px] font-bold text-charcoal/70 block mb-1">{t('region')}</label>
             <select
               value={filters.cuisineRegion}
               onChange={(e) => setFilters(prev => ({ ...prev, cuisineRegion: e.target.value as any }))}
@@ -231,7 +231,7 @@ export const RecipeDiscoveryView: React.FC = () => {
 
           {/* Dish Type */}
           <div>
-            <label className="text-[11px] font-bold text-charcoal/70 block mb-1">Dish Type</label>
+            <label className="text-[11px] font-bold text-charcoal/70 block mb-1">{t('dishType')}</label>
             <select
               value={filters.dishType}
               onChange={(e) => setFilters(prev => ({ ...prev, dishType: e.target.value as any }))}
@@ -245,7 +245,7 @@ export const RecipeDiscoveryView: React.FC = () => {
 
           {/* Dietary Preference */}
           <div>
-            <label className="text-[11px] font-bold text-charcoal/70 block mb-1">Dietary</label>
+            <label className="text-[11px] font-bold text-charcoal/70 block mb-1">{t('dietary')}</label>
             <select
               value={filters.dietaryPreference}
               onChange={(e) => setFilters(prev => ({ ...prev, dietaryPreference: e.target.value as any }))}
@@ -259,7 +259,7 @@ export const RecipeDiscoveryView: React.FC = () => {
 
           {/* Cooking Time */}
           <div>
-            <label className="text-[11px] font-bold text-charcoal/70 block mb-1">Cooking Time</label>
+            <label className="text-[11px] font-bold text-charcoal/70 block mb-1">{t('cookTime')}</label>
             <select
               value={filters.cookingTime}
               onChange={(e) => setFilters(prev => ({ ...prev, cookingTime: e.target.value as any }))}
@@ -273,7 +273,7 @@ export const RecipeDiscoveryView: React.FC = () => {
 
           {/* Difficulty */}
           <div>
-            <label className="text-[11px] font-bold text-charcoal/70 block mb-1">Difficulty</label>
+            <label className="text-[11px] font-bold text-charcoal/70 block mb-1">{t('difficulty')}</label>
             <select
               value={filters.difficulty}
               onChange={(e) => setFilters(prev => ({ ...prev, difficulty: e.target.value as any }))}
@@ -284,7 +284,6 @@ export const RecipeDiscoveryView: React.FC = () => {
               ))}
             </select>
           </div>
-
         </div>
 
         {/* Quick Dish Type Pills */}
@@ -311,9 +310,11 @@ export const RecipeDiscoveryView: React.FC = () => {
       {/* Results Count & Recipe Cards Grid */}
       <div className="space-y-6">
         <div className="flex items-center justify-between text-xs text-charcoal/70 font-medium">
-          <span>Showing {filteredRecipes.length} authentic dishes</span>
+          <span>{t('showingDishes', { count: filteredRecipes.length })}</span>
           {hasActiveFilters && (
-            <span className="text-terracotta-700 font-bold">Filtered by selected criteria</span>
+            <span className="text-terracotta-700 font-bold">
+              {language === 'bn' ? 'নির্দিষ্ট শর্ত অনুযায়ী বাছাইকৃত' : 'Filtered by selected criteria'}
+            </span>
           )}
         </div>
 
@@ -321,16 +322,18 @@ export const RecipeDiscoveryView: React.FC = () => {
           <div className="text-center py-20 bg-white rounded-3xl border border-terracotta-100 p-8 space-y-3">
             <ChefHat className="w-14 h-14 mx-auto text-terracotta-300 stroke-[1.5]" />
             <h3 className="text-lg font-serif font-bold text-charcoal">
-              No matching Bengali recipes found
+              {language === 'bn' ? 'কোনো বাঙালি পদ পাওয়া যায়নি' : 'No matching Bengali recipes found'}
             </h3>
             <p className="text-xs text-charcoal/60 max-w-sm mx-auto">
-              We couldn't find any recipes matching your current search or filters. Try clearing some filters to explore more of Bengal's cuisine!
+              {language === 'bn' 
+                ? 'আপনার বাছাইয়ের সাথে মেলে এমন কোনো রেসিপি পাওয়া যায়নি। অনুগ্রহ করে অন্য ফিল্টার দিয়ে চেষ্টা করুন।' 
+                : 'We couldn\'t find any recipes matching your current search or filters. Try clearing some filters to explore more of Bengal\'s cuisine!'}
             </p>
             <button
               onClick={resetFilters}
               className="mt-2 px-5 py-2 rounded-xl bg-sindoor-700 hover:bg-sindoor-800 text-white text-xs font-bold shadow-xs transition-all"
             >
-              Reset All Filters
+              {t('resetFilters')}
             </button>
           </div>
         ) : (

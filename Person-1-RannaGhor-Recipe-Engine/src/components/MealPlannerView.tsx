@@ -46,7 +46,8 @@ export const MealPlannerView: React.FC = () => {
     setActiveTab,
     sendMealPlanEmailToUser,
     user,
-    language
+    language,
+    t
   } = useApp();
 
   const [activeDay, setActiveDay] = useState<WeekDays>('Monday');
@@ -75,10 +76,10 @@ export const MealPlannerView: React.FC = () => {
               <span>Weekly Kitchen Routine • সাপ্তাহিক খাবারের পরিকল্পনা</span>
             </div>
             <h1 className="text-2xl sm:text-4xl font-serif font-bold tracking-tight">
-              Bengali Weekly Meal Planner
+              {t('plannerTitle')}
             </h1>
             <p className="text-white/80 text-xs sm:text-sm mt-1 max-w-xl font-light">
-              Harmonize traditional multi-course meals, reduce daily stress, and automatically build your weekly bazaar list.
+              {t('plannerSub')}
             </p>
           </div>
 
@@ -89,7 +90,7 @@ export const MealPlannerView: React.FC = () => {
               className="flex items-center space-x-2 bg-gradient-to-r from-mustard-500 to-mustard-600 hover:from-mustard-600 hover:to-mustard-700 text-sindoor-950 font-bold px-4 py-2.5 rounded-2xl text-xs shadow-md transition-all transform hover:-translate-y-0.5"
             >
               <Sparkles className="w-4 h-4 text-sindoor-900" />
-              <span>Generate My Weekly Plan</span>
+              <span>{t('generatePlanBtn')}</span>
             </button>
 
             <button
@@ -100,7 +101,7 @@ export const MealPlannerView: React.FC = () => {
               className="flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-4 py-2.5 rounded-2xl text-xs backdrop-blur-sm transition-all"
             >
               <ShoppingBag className="w-4 h-4" />
-              <span>Sync with Shopping List</span>
+              <span>{t('syncShoppingBtn')}</span>
             </button>
 
             <button
