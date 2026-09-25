@@ -37,12 +37,12 @@ const AppContent: React.FC = () => {
   } = useApp();
 
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-[#FAF7F2] text-charcoal">
+    <div className="min-h-screen flex flex-col justify-between bg-[#FAF7F2] text-charcoal w-full max-w-full overflow-x-hidden relative">
       {/* Top Navbar */}
       <Navbar />
 
       {/* Main View Router */}
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         {activeTab === 'home' && <HomepageView />}
         {activeTab === 'recipes' && <RecipeDiscoveryView />}
         {activeTab === 'planner' && <MealPlannerView />}

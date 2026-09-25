@@ -23,13 +23,13 @@ export const HomepageView: React.FC = () => {
   const featuredRecipes = recipes.filter(r => r.featured).slice(0, 6);
 
   return (
-    <div className="space-y-16 animate-fadeIn pb-12">
+    <div className="space-y-16 animate-fadeIn pb-12 w-full max-w-full overflow-hidden">
       
       {/* 1. Hero Section */}
       <HeroSection />
 
       {/* 2. Featured Iconic Bengali Recipes */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full overflow-hidden">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
             <div className="flex items-center space-x-2 text-sindoor-700 text-xs font-bold uppercase tracking-wider mb-1.5">
@@ -63,8 +63,8 @@ export const HomepageView: React.FC = () => {
       <AlpanaDivider variant="elaborate" />
 
       {/* 3. Interactive Feature Callout Banner: "What Can I Cook?" */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-terracotta-800 via-sindoor-900 to-charcoal rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full overflow-hidden">
+        <div className="bg-gradient-to-r from-terracotta-800 via-sindoor-900 to-charcoal rounded-3xl p-6 sm:p-8 md:p-12 text-white shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="space-y-4 max-w-xl">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-mustard-500/20 border border-mustard-400/40 text-mustard-300 text-xs font-bold">
               <Flame className="w-4 h-4 text-mustard-400" />
@@ -106,7 +106,7 @@ export const HomepageView: React.FC = () => {
       </section>
 
       {/* 4. Why RannaGhor - 4 Value Pillars */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full overflow-hidden">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-sindoor-950">
             A Digital Kitchen Companion for Every Bengali Home
@@ -170,7 +170,7 @@ export const HomepageView: React.FC = () => {
       </section>
 
       {/* 5. Bengali Festival Meal Showcase */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full overflow-hidden">
         <div className="bg-cream-100/80 rounded-3xl p-6 sm:p-10 border border-terracotta-200 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2">
             <span className="text-xs font-bold text-terracotta-700 uppercase tracking-wider">

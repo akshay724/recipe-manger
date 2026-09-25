@@ -34,13 +34,13 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <div className="relative overflow-hidden pt-6 pb-12 sm:pt-10 sm:pb-16 bg-[#FAF7F2]">
+    <div className="relative overflow-hidden pt-6 pb-12 sm:pt-10 sm:pb-16 bg-[#FAF7F2] w-full max-w-full">
       
       {/* Subtle Alpana and Terracotta Background Ornaments */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-mustard-400/10 blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-sindoor-600/10 blur-3xl pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-full">
         
         {/* Main Hero Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -109,7 +109,7 @@ export const HeroSection: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 sm:gap-4 w-full">
             {mealSpread.map((item) => {
               const rec = getRecipeById(item.id);
               if (!rec) return null;

@@ -83,45 +83,45 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-terracotta-100 shadow-sm transition-all duration-300">
+      <header className="sticky top-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-terracotta-100 shadow-sm transition-all duration-300 w-full max-w-full overflow-x-clip">
         {/* Cultural top accent line inspired by sindoor and mustard */}
         <div className="h-1 w-full bg-gradient-to-r from-sindoor-700 via-mustard-500 to-terracotta-600"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
+          <div className="flex items-center justify-between h-16 sm:h-20 w-full min-w-0">
             
             {/* Logo and Tagline */}
             <div 
-              className="flex items-center space-x-3 cursor-pointer group"
+              className="flex items-center space-x-2 sm:space-x-3 cursor-pointer group shrink-0 min-w-0"
               onClick={() => handleNavClick('home')}
             >
-              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-sindoor-700 via-terracotta-600 to-mustard-600 flex items-center justify-center text-white shadow-md transform group-hover:scale-105 transition-transform duration-200">
-                <ChefHat className="w-6 h-6 stroke-[2.2]" />
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-br from-sindoor-700 via-terracotta-600 to-mustard-600 flex items-center justify-center text-white shadow-md transform group-hover:scale-105 transition-transform duration-200 shrink-0">
+                <ChefHat className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
               </div>
-              <div className="flex flex-col">
-                <div className="flex items-baseline space-x-2">
-                  <span className="text-2xl font-serif font-bold tracking-tight text-sindoor-900 group-hover:text-sindoor-700 transition-colors">
+              <div className="flex flex-col min-w-0">
+                <div className="flex items-baseline space-x-1.5 sm:space-x-2">
+                  <span className="text-xl sm:text-2xl font-serif font-bold tracking-tight text-sindoor-900 group-hover:text-sindoor-700 transition-colors">
                     RannaGhor
                   </span>
-                  <span className="font-bengali text-xs font-semibold text-terracotta-600 tracking-wide">
+                  <span className="font-bengali text-[11px] sm:text-xs font-semibold text-terracotta-600 tracking-wide">
                     রান্নাঘর
                   </span>
                 </div>
-                <span className="text-[11px] font-medium text-charcoal/60 tracking-wider uppercase font-bengali">
+                <span className="hidden md:block text-[10px] font-medium text-charcoal/60 tracking-wider uppercase font-bengali truncate">
                   {t('tagline')}
                 </span>
               </div>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+            <nav className="hidden xl:flex items-center space-x-1 shrink min-w-0">
               {navItems.slice(0, 6).map((item) => {
                 const isActive = activeTab === item.id;
                 return (
                   <button
                     key={item.id}
                     onClick={() => handleNavClick(item.id)}
-                    className={`relative px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200 flex items-center space-x-1.5 ${
+                    className={`relative px-2.5 py-1.5 rounded-xl text-xs xl:text-sm font-medium transition-all duration-200 flex items-center space-x-1 whitespace-nowrap ${
                       isActive 
                         ? 'bg-sindoor-50 text-sindoor-800 font-semibold shadow-xs' 
                         : 'text-charcoal/80 hover:text-sindoor-800 hover:bg-cream-100'
@@ -138,23 +138,23 @@ export const Navbar: React.FC = () => {
               })}
 
               {/* Special Bengali Features Dropdown / Quick Links */}
-              <div className="h-5 w-[1px] bg-terracotta-200 mx-1"></div>
+              <div className="h-4 w-[1px] bg-terracotta-200 mx-1"></div>
 
               <button
                 onClick={() => handleNavClick('what-can-i-cook')}
-                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center space-x-1.5 ${
+                className={`px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center space-x-1 whitespace-nowrap ${
                   activeTab === 'what-can-i-cook'
                     ? 'bg-mustard-500 text-sindoor-950 shadow-xs'
                     : 'bg-mustard-100/80 text-mustard-900 hover:bg-mustard-200/90'
                 }`}
               >
-                <Flame className="w-3.5 h-3.5 text-sindoor-700 fill-sindoor-700" />
+                <Flame className="w-3.5 h-3.5 text-sindoor-700 fill-sindoor-700 shrink-0" />
                 <span>{language === 'bn' ? 'কী রাঁধব আজ?' : 'কী রাঁধব?'}</span>
               </button>
 
               <button
                 onClick={() => handleNavClick('festivals')}
-                className={`px-2.5 py-1.5 rounded-xl text-xs font-medium transition-all ${
+                className={`hidden 2xl:block px-2.5 py-1.5 rounded-xl text-xs font-medium transition-all whitespace-nowrap ${
                   activeTab === 'festivals' ? 'text-sindoor-800 font-bold bg-cream-200' : 'text-charcoal/70 hover:text-sindoor-800'
                 }`}
               >
@@ -163,7 +163,7 @@ export const Navbar: React.FC = () => {
 
               <button
                 onClick={() => handleNavClick('seasonal')}
-                className={`px-2.5 py-1.5 rounded-xl text-xs font-medium transition-all ${
+                className={`hidden 2xl:block px-2.5 py-1.5 rounded-xl text-xs font-medium transition-all whitespace-nowrap ${
                   activeTab === 'seasonal' ? 'text-sindoor-800 font-bold bg-cream-200' : 'text-charcoal/70 hover:text-sindoor-800'
                 }`}
               >
@@ -172,15 +172,15 @@ export const Navbar: React.FC = () => {
             </nav>
 
             {/* Right Action Icons */}
-            <div className="flex items-center space-x-2 sm:space-x-3">
+            <div className="flex items-center space-x-1 sm:space-x-2 shrink-0">
               
               {/* Language Switcher Button (English / বাংলা) */}
-              <div className="flex items-center bg-cream-100 rounded-2xl p-1 border border-terracotta-200 shadow-xs">
+              <div className="flex items-center bg-cream-100 rounded-xl p-0.5 sm:p-1 border border-terracotta-200 shadow-2xs">
                 <button
                   onClick={() => setLanguage('en')}
-                  className={`px-2.5 py-1 rounded-xl text-xs font-bold transition-all ${
+                  className={`px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-xs font-bold transition-all ${
                     language === 'en'
-                      ? 'bg-sindoor-700 text-white shadow-xs'
+                      ? 'bg-sindoor-700 text-white shadow-2xs'
                       : 'text-charcoal/70 hover:text-charcoal'
                   }`}
                   title="Switch to English"
@@ -189,9 +189,9 @@ export const Navbar: React.FC = () => {
                 </button>
                 <button
                   onClick={() => setLanguage('bn')}
-                  className={`px-2.5 py-1 rounded-xl text-xs font-bold font-bengali transition-all ${
+                  className={`px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-xs font-bold font-bengali transition-all ${
                     language === 'bn'
-                      ? 'bg-sindoor-700 text-white shadow-xs'
+                      ? 'bg-sindoor-700 text-white shadow-2xs'
                       : 'text-charcoal/70 hover:text-charcoal'
                   }`}
                   title="বাংলা ভাষায় দেখুন"
@@ -200,8 +200,8 @@ export const Navbar: React.FC = () => {
                 </button>
               </div>
 
-              {/* Search Toggle / Input */}
-              <div className="relative">
+              {/* Search Toggle / Input (Desktop/Tablet) */}
+              <div className="hidden md:block relative">
                 {showSearchInput ? (
                   <div className="flex items-center bg-white rounded-full border border-terracotta-200 px-3 py-1.5 shadow-sm">
                     <Search className="w-4 h-4 text-terracotta-500 mr-2 shrink-0" />
@@ -229,25 +229,25 @@ export const Navbar: React.FC = () => {
                       setShowSearchInput(true);
                       if (activeTab !== 'recipes') setActiveTab('recipes');
                     }}
-                    className="p-2.5 rounded-full hover:bg-cream-200 text-charcoal/75 hover:text-sindoor-800 transition-colors"
+                    className="p-2 sm:p-2.5 rounded-full hover:bg-cream-200 text-charcoal/75 hover:text-sindoor-800 transition-colors"
                     title="Search recipes"
                   >
-                    <Search className="w-5 h-5" />
+                    <Search className="w-4 h-4 sm:w-5 sm:h-5" />
                   </button>
                 )}
               </div>
 
-              {/* Favorites Button */}
+              {/* Favorites Button (Desktop/Tablet, available in mobile drawer & bottom bar) */}
               <button
                 onClick={() => handleNavClick('favorites')}
-                className={`p-2.5 rounded-full relative transition-colors ${
+                className={`hidden sm:flex p-2 sm:p-2.5 rounded-full relative transition-colors ${
                   activeTab === 'favorites' ? 'bg-sindoor-100 text-sindoor-800' : 'hover:bg-cream-200 text-charcoal/75 hover:text-sindoor-800'
                 }`}
                 title="Favorite Recipes"
               >
-                <Heart className={`w-5 h-5 ${favorites.length > 0 ? 'fill-sindoor-600 text-sindoor-600' : ''}`} />
+                <Heart className={`w-4 h-4 sm:w-5 sm:h-5 ${favorites.length > 0 ? 'fill-sindoor-600 text-sindoor-600' : ''}`} />
                 {favorites.length > 0 && (
-                  <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-sindoor-700 text-white text-[10px] font-bold flex items-center justify-center">
+                  <span className="absolute top-0.5 right-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-sindoor-700 text-white text-[9px] sm:text-[10px] font-bold flex items-center justify-center">
                     {favorites.length}
                   </span>
                 )}
@@ -256,12 +256,12 @@ export const Navbar: React.FC = () => {
               {/* Email Notifications Button */}
               <button
                 onClick={() => setIsEmailInboxOpen(true)}
-                className="p-2.5 rounded-full relative transition-colors hover:bg-cream-200 text-charcoal/75 hover:text-sindoor-800"
+                className="p-1.5 sm:p-2.5 rounded-full relative transition-colors hover:bg-cream-200 text-charcoal/75 hover:text-sindoor-800"
                 title={user ? `Google Account Emails (${user.email})` : "Email Notifications"}
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                 {unreadEmailCount > 0 && (
-                  <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-sindoor-700 text-white text-[10px] font-bold flex items-center justify-center animate-pulse">
+                  <span className="absolute top-0 right-0 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-sindoor-700 text-white text-[9px] sm:text-[10px] font-bold flex items-center justify-center animate-pulse">
                     {unreadEmailCount}
                   </span>
                 )}
@@ -270,9 +270,9 @@ export const Navbar: React.FC = () => {
               {/* Add Recipe Action Button */}
               <button
                 onClick={() => setIsCreateRecipeOpen(true)}
-                className="hidden sm:flex items-center space-x-1.5 bg-sindoor-700 hover:bg-sindoor-800 text-white px-3.5 py-2 rounded-xl text-xs font-semibold shadow-xs transition-all hover:shadow"
+                className="hidden lg:flex items-center space-x-1.5 bg-sindoor-700 hover:bg-sindoor-800 text-white px-3 py-1.5 rounded-xl text-xs font-semibold shadow-xs transition-all hover:shadow"
               >
-                <PlusCircle className="w-4 h-4" />
+                <PlusCircle className="w-3.5 h-3.5" />
                 <span>{t('newRecipe')}</span>
               </button>
 
@@ -281,18 +281,18 @@ export const Navbar: React.FC = () => {
                 <div className="relative" ref={userDropdownRef}>
                   <button
                     onClick={() => setShowUserDropdown(!showUserDropdown)}
-                    className="flex items-center space-x-2 p-1 rounded-full border border-terracotta-200 hover:border-sindoor-600 bg-white transition-all shadow-2xs hover:shadow-xs group"
+                    className="flex items-center space-x-1.5 p-0.5 sm:p-1 rounded-full border border-terracotta-200 hover:border-sindoor-600 bg-white transition-all shadow-2xs hover:shadow-xs group"
                     title={user.name}
                   >
                     <div className="relative">
                       <img
                         src={user.avatarUrl}
                         alt={user.name}
-                        className="w-8 h-8 rounded-full object-cover border border-terracotta-200 group-hover:border-sindoor-600 transition-colors"
+                        className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-terracotta-200 group-hover:border-sindoor-600 transition-colors"
                       />
                       {/* Google G Tiny Badge */}
-                      <div className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-white flex items-center justify-center shadow-xs border border-gray-100">
-                        <svg className="w-2.5 h-2.5" viewBox="0 0 24 24">
+                      <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-white flex items-center justify-center shadow-xs border border-gray-100">
+                        <svg className="w-2 h-2" viewBox="0 0 24 24">
                           <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                           <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                           <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
@@ -416,17 +416,17 @@ export const Navbar: React.FC = () => {
                 /* Google Sign In CTA Button */
                 <button
                   onClick={() => setIsAuthModalOpen(true)}
-                  className="flex items-center space-x-2 bg-white hover:bg-cream-50 text-charcoal border border-terracotta-200 hover:border-sindoor-600 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-2xs transition-all hover:shadow-xs group"
+                  className="flex items-center space-x-1.5 bg-white hover:bg-cream-50 text-charcoal border border-terracotta-200 hover:border-sindoor-600 px-2 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-xs font-semibold shadow-2xs transition-all hover:shadow-xs group"
                   title="Sign in with Google"
                 >
-                  <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                  <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                     <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                     <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
                     <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
                   </svg>
-                  <span className="font-semibold text-xs text-sindoor-950 group-hover:text-sindoor-700">
-                    {language === 'bn' ? 'Google সাইন-ইন' : 'Sign In'}
+                  <span className="hidden sm:inline font-semibold text-xs text-sindoor-950 group-hover:text-sindoor-700">
+                    {language === 'bn' ? 'সাইন-ইন' : 'Sign In'}
                   </span>
                 </button>
               )}
@@ -434,9 +434,10 @@ export const Navbar: React.FC = () => {
               {/* Mobile menu trigger */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2 rounded-xl text-charcoal hover:bg-cream-200"
+                className="xl:hidden p-1.5 sm:p-2 rounded-xl text-charcoal hover:bg-cream-200"
+                title="Navigation Menu"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
               </button>
             </div>
           </div>
@@ -444,7 +445,7 @@ export const Navbar: React.FC = () => {
 
         {/* Mobile menu dropdown */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-cream-50 border-b border-terracotta-200 px-4 pt-3 pb-6 space-y-3 animate-fadeIn">
+          <div className="xl:hidden bg-cream-50 border-b border-terracotta-200 px-4 pt-3 pb-6 space-y-3 animate-fadeIn w-full max-w-full overflow-hidden">
             {/* Mobile Google Auth Section */}
             {isAuthenticated && user ? (
               <div className="bg-white p-3 rounded-2xl border border-terracotta-200 flex items-center justify-between shadow-2xs">
@@ -552,7 +553,7 @@ export const Navbar: React.FC = () => {
       </header>
 
       {/* Mobile Bottom Navigation Bar (Fixed for responsive convenience) */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-terracotta-200 py-2 px-3 flex items-center justify-around shadow-lg">
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-terracotta-200 py-2 px-3 flex items-center justify-around shadow-lg w-full max-w-full overflow-hidden">
         <button
           onClick={() => handleNavClick('home')}
           className={`flex flex-col items-center py-1 px-2 text-[10px] font-medium transition-colors ${

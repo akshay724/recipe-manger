@@ -7,12 +7,12 @@ export const Footer: React.FC = () => {
   const { setActiveTab } = useApp();
 
   return (
-    <footer className="bg-[#181615] text-[#ECE6DE] pt-12 pb-24 lg:pb-12 border-t border-terracotta-900/60 relative overflow-hidden">
+    <footer className="bg-[#181615] text-[#ECE6DE] pt-12 pb-24 lg:pb-12 border-t border-terracotta-900/60 relative overflow-hidden w-full max-w-full">
       
       {/* Decorative Top Accent */}
       <div className="h-1 w-full bg-gradient-to-r from-sindoor-800 via-mustard-600 to-terracotta-700"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           
