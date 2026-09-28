@@ -1,16 +1,16 @@
-# 🍲 RannaGhor (রান্নাঘর) — Person 2 Repository
+# 🍲 RannaGhor — avidrita Repository
 
 > **Bengali Cuisine Recipe Manager, Weekly Meal Planner & Digital Kitchen Companion**  
-> *Dedicated Project Repository for Team Member 2*
+> 
 
 ---
 
 ## 👤 Team Member Information
-- **Team Member**: Person 2
+- **Team Member**: Avidrita Mallick
 - **Assigned Module**: Weekly Meal Planner, Household Rhythms & Smart Routine Generator
-- **বাংলা ভূমিকা**: সাপ্তাহিক মিল প্ল্যানার, পারিবারিক খাদ্যরীতি ও স্মার্ট রুটিন জেনারেটর
+  
 - **Core Responsibilities & Highlights**:
-  7-Day Weekly Household Routine (Breakfast, Lunch, Evening Tiffin, Dinner), Traditional Bengali Meal Sequences (Shukto -> Dal -> Tarkari -> Machh/Mangsho -> Chutney -> Mishti), and AI Smart Plan Wizard balancing budget, family size, dietary preferences, and zero-waste ingredient reuse.
+  7-Day Weekly Household Routine (Breakfast, Lunch, Evening Tiffin, Dinner), Traditional Bengali Meal Sequences (Shukto -> Dal -> sabji -> Machh/Mangsho -> Chutney -> sweets), and AI Smart Plan Wizard balancing budget, family size, dietary preferences, and zero-waste ingredient reuse.
 
 ---
 
