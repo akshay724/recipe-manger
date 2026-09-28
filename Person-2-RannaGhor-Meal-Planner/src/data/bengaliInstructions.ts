@@ -1,246 +1,191 @@
 export const RECIPE_BENGALI_INSTRUCTIONS: Record<string, string[]> = {
-  'shorshe-ilish': [
-    'ইলিশ মাছের টুকরোগুলো আলতো করে ধুয়ে কিচেন পেপার দিয়ে শুকিয়ে নিন। ১/২ চা চামচ হলুদ ও ১/২ চা চামচ নুন মাখিয়ে রাখুন।',
-    'হলুদ ও কালো শর্ষে সামান্য গরম জলে এক চিমটি নুন ও ২টি কাঁচা লঙ্কা দিয়ে ১৫ মিনিট ভিজিয়ে রেখে মিহি করে বেটে নিন (নুন দিলে শর্ষের তেতো ভাব কেটে যায়)।',
-    'শর্ষে বাটার পেস্টটি ছাঁকনি দিয়ে ছেঁকে খোসা আলাদা করে নিন, যাতে ঝোলের স্বাদ মসৃণ ও আরামদায়ক হয়।',
-    'কড়াইতে ২ টেবিল চামচ শর্ষের তেল ভালো করে গরম করুন। কালো জিরে ও ২টি চেরা কাঁচা লঙ্কা ফোড়ন দিন।',
-    'আঁচ কমিয়ে ছেঁকে রাখা শর্ষের জল, বাকি হলুদ ও নুন মিশিয়ে হালকা আঁচে ফুটতে দিন।',
-    'ফুটন্ত ঝোলে সাবধানে কাঁচা ইলিশের টুকরোগুলো দিয়ে দিন। ঢাকা দিয়ে মাঝারি-কম আঁচে ৬–৭ মিনিট সেদ্ধ হতে দিন।',
-    'সাবধানে মাছের টুকরোগুলো উল্টে দিন, বাকি চেরা কাঁচা লঙ্কা দিন এবং আরও ৫ মিনিট ঢাকা দিয়ে রান্না করুন।',
-    'নামানোর ঠিক আগে উপর থেকে ১ টেবিল চামচ কাঁচা শর্ষের তেল ছড়িয়ে দিন। গ্যাস বন্ধ করে ৫ মিনিট ঢেকে রেখে ধোঁয়া ওঠা গোবিন্দভোগ ভাতের সাথে পরিবেশন করুন।'
-  ],
+
+shorshe_ilish_recipe = [
+    'Experience the culinary crown jewel of Bengal with Shorshe Ilish, a sublime harmony of tender ',
+    "Hilsa fish and a pungent, velvety mustard gravy. To prepare, marinate fresh Hilsa steaks with ",
+    "turmeric and salt. In a blender, grind soaked yellow and black mustard seeds with fiery green ",
+    "chilies and a pinch of salt into a smooth paste. Gently whisk this vibrant paste with water, ",
+    "extra turmeric, and a generous drizzle of raw, aromatic mustard oil. Pour the mixture over ",
+    "the fish in a pan, scatter scattered slit green chilies on top, and simmer gently under a lid ",
+    "for 10 to 12 minutes until the fish is flaky and cooked through. Finish with a final splash ",
+    "of raw mustard oil and serve piping hot over a bed of steamed white rice for pure, authentic bliss."
+],
+
   'aloo-posto': [
-    'পোস্তদানা গরম জলে ২০ মিনিট ভিজিয়ে রাখুন। ২–৩টি কাঁচা লঙ্কা ও অল্প জল দিয়ে শিল-নোড়ায় বা মিক্সারে মিহি ও মোলায়েম করে বেটে নিন।',
-    'কড়াইতে ২ টেবিল চামচ শর্ষের তেল গরম করুন। কালো জিরে ও চেরা কাঁচা লঙ্কা ফোড়ন দিয়ে সুবাস বের হতে দিন।',
-    'ডুমো করে কাটা আলু দিন এবং মাঝারি আঁচে ৪–৫ মিনিট হালকা সোনালি হওয়া পর্যন্ত ভাজুন।',
-    'নুন ও সামান্য হলুদ (ঐচ্ছিক) দিন। ৩/৪ কাপ গরম জল ঢেলে ঢাকা দিয়ে আলু নরম হওয়া পর্যন্ত (৮–১০ মিনিট) সেদ্ধ করুন।',
-    'আঁচ কমিয়ে বেটে রাখা পোস্ত মিশিয়ে দিন। মাঝারি-কম আঁচে ৩–৪ মিনিট নাড়ুন যাতে পোস্ত আলুর গায়ে মাখামাখি হয়ে যায়।',
-    'গ্যাস বন্ধ করে ওপর থেকে ১ টেবিল চামচ কাঁচা ঝাঁঝালো শর্ষের তেল ছড়িয়ে দিন। ৩ মিনিট ঢেকে রেখে গরম ভাত ও বিউলির ডালের সাথে পরিবেশন করুন।'
+     "Savour the ultimate Bengali comfort food with Aloo Posto, a delicate and creamy dish featuring ",
+    "tender potato cubes enveloped in a rich, nutty poppy seed paste. To prepare, soak poppy seeds ",
+    "in warm water, then grind them with a few green chilies into a thick, smooth paste. Heat aromatic ",
+    "mustard oil in a pan, temper it with pungent kalonji (nigella seeds), and toss in the diced potatoes ",
+    "to fry until lightly golden. Stir in the luxurious poppy seed paste, season with salt, and add a ",
+    "splash of water before covering to simmer until the potatoes are melt-in-your-mouth soft. Finish ",
+    "with a drizzle of raw mustard oil and a few slit chilies, creating a heartwarming dish best ",
+    "enjoyed alongside hot rice and thick biulir dal."
   ],
   'chingri-malai-curry': [
-    'গলদা বা বাগদা চিংড়ির মাথা ও লেজ অক্ষত রেখে খোসা ছাড়িয়ে শিরা পরিষ্কার করুন। নুন ও হলুদ মাখিয়ে রাখুন।',
-    'কড়াইতে ২ টেবিল চামচ শর্ষের তেল গরম করে চিংড়িগুলো উভয় পিঠে মাত্র ৪৫ সেকেন্ড করে হালকা ভেজে তুলে নিন। বেশি ভাজলে চিংড়ি শক্ত হয়ে যাবে।',
-    'ঐ তেলেই ১ টেবিল চামচ ঘি যোগ করুন। তেজপাতা, ছোট এলাচ, দারুচিনি ও লবঙ্গ ফোড়ন দিন।',
-    'পেঁয়াজ বাটা দিয়ে সোনালি করে ভাজুন। এরপর আদা বাটা দিয়ে কাঁচা গন্ধ যাওয়া পর্যন্ত ২ মিনিট কষুন।',
-    'কাশ্মীরি লঙ্কার গুঁড়ো, হলুদ গুঁড়ো, চিনি ও নুন দিন। মশলা থেকে তেল ছাড়া পর্যন্ত কষাতে থাকুন।',
-    'ঘন নারকেলের দুধ আস্তে আস্তে ঢেলে নাড়তে থাকুন যাতে কেটে না যায়। হালকা ফুটে উঠলে আঁচ কমান।',
-    'ভেজে রাখা চিংড়ি ও চেরা কাঁচা লঙ্কা ঝোলে দিয়ে দিন। কম আঁচে ৫–৬ মিনিট রান্না করুন যাতে চিংড়ির মধ্যে নারকেলের স্বাদ ঢোকে।',
-    'উপর থেকে গরম মশলা গুঁড়ো ও সামান্য ঘি ছড়িয়ে ঢাকা দিন। ৫ মিনিট পর গরম বাসন্তী পোলাওয়ের সাথে পরিবেশন করুন।'
+    "Indulge in the luxurious elegance of Chingri Malai Curry, an iconic Bengali delicacy where succulent " ,
+  "golda chingri (tiger prawns) swim in a rich, velvety coconut milk gravy. To prepare, lightly sear " ,
+  "marinated prawns in aromatic mustard oil until they turn a beautiful golden pink. In the same oil, " ,
+  "temper whole spices—cardamom, cinnamon, and cloves—before sautéing a smooth paste of onions, ginger, " ,
+  "and mild spices. Pour in thick, fresh coconut milk and gently slide the prawns back into the simmering, " ,
+  "creamy sauce. Let it reduce until the oil separates, finishing with a touch of ghee and garam masala " ,
+  "for a majestic dish that pairs perfectly with fragrant basmati pulao."
   ],
   'kosha-mangsho': [
-    'পাঁঠার মাংস টক দই, ১ টেবিল চামচ শর্ষের তেল, অর্ধেক আদা-রসুন বাটা, হলুদ ও কাশ্মীরি লঙ্কা দিয়ে অন্তত ২ ঘণ্টা ম্যারিনেট করে রাখুন।',
-    'লোহার কড়াইতে শর্ষের তেল গরম করে বড় আলুর টুকরো নুন-হলুদ দিয়ে সোনালি করে ভেজে তুলে রাখুন।',
-    'ঐ তেলেই ১ চা চামচ চিনি ফেলে হালকা আঁচে গলিয়ে লালচে ক্যারামেল তৈরি করুন (এটাই কলকাতার কষা মাংসের রঙের গোপন রহস্য)।',
-    'তেজপাতা, শুকনো লঙ্কা ও গোটা গরম মশলা ফোড়ন দিয়ে কুচানো পেঁয়াজ দিন। পেঁয়াজ লালচে-বাদামি হওয়া পর্যন্ত ভাজুন।',
-    'বাকি আদা-রসুন বাটা, জিরে গুঁড়ো, ধনে গুঁড়ো ও অল্প গরম জল দিয়ে তেল না ছাড়া পর্যন্ত ভালো করে কষুন।',
-    'ম্যারিনেট করা মাংস কড়াইতে দিন। তীব্র আঁচে ১০ মিনিট মাংস অনবরত নাড়াচাড়া করে কষতে (ভুনতে) থাকুন।',
-    'আঁচ কমিয়ে ঢাকা দিয়ে ৪৫–৫০ মিনিট ধীরে ধীরে রান্না করুন। প্রতি ৭ মিনিট অন্তর ঢাকনা খুলে নাড়ুন যাতে তলায় না লেগে যায়।',
-    'ভাজা আলু ও দেড় কাপ ফুটন্ত গরম জল দিন। মাংস মাখনের মতো নরম ও ঝোল ঘন তেলতেলে না হওয়া পর্যন্ত ফোটান।',
-    'নামানোর আগে ঘি ও তাজা গুঁড়ো করা গরম মশলা মিশিয়ে নিন। ফুলকো লুচি বা পোলাওয়ের সাথে পরিবেশন করুন।'
+    "Experience the ultimate celebration of Bengali cuisine with Kosha Mangsho, a legendary, deeply " ,
+  "caramelised mutton dish revered for its rich, velvety, and intensely spiced dark gravy. To prepare, " ,
+  "marinate tender pieces of mutton in a robust blend of thick yogurt, mustard oil, ginger-garlic paste, " ,
+  "and hot spices. Sear the meat in smoking mustard oil tempered with whole garam masala, then begin " ,
+  "the slow, patient process of 'kosha'—continuous slow-cooking and stirring with fried onions and tomatoes " ,
+  "until the moisture evaporates and the meat turns melt-in-your-mouth tender. Finished with a touch of " ,
+  "ghee and Bengali garam masala, this dark, glorious masterpiece is traditionally devoured with hot " ,
+  "luchis or fragrant basmati pulao.";
   ],
   'shukto': [
-    'কড়াইতে শর্ষের তেল গরম করে বিউলির ডালের বড়ি সোনালি ও মুচমুচে করে ভেজে তুলে রাখুন।',
-    'ঐ তেলেই করলার টুকরোগুলো হালকা নুন-হলুদ দিয়ে ভেজে আলাদা রাখুন।',
-    'আর একটু তেল দিয়ে তেজপাতা ও রাধুনি ফোড়ন দিন। সুন্দর গন্ধ বের হলে সব শক্ত সবজি (আলু, রাঙা আলু, কাঁচকলা, সজনে ডাঁটা) দিয়ে ৪ মিনিট ভাজুন।',
-    'বেগুন যোগ করে আরও ২ মিনিট নাড়ুন। দেড় কাপ গরম জল ও নুন দিয়ে ঢাকা দিয়ে সবজি নরম হওয়া পর্যন্ত সেদ্ধ করুন।',
-    'দুধের সাথে শর্ষে-আদা বাটা গুলে ঝোলে ঢালুন। ভাজা করলা ও বড়ি দিয়ে মৃদু আঁচে ৪ মিনিট ফুটতে দিন।',
-    'নামানোর আগে ১ চামচ গাওয়া ঘি, রাধুনি বাটা ও ভাজা পাঁচফোড়নের গুঁড়ো ছড়িয়ে গ্যাস বন্ধ করুন। ১০ মিনিট ঢেকে রেখে পরিবেশন করুন।'
+   "Begin your traditional Bengali feast with Shukto, a soothing, bittersweet vegetable stew crafted " ,
+  "to cleanse the palate and cool the body. To prepare, cut a medley of traditional vegetables like " ,
+  "bitter gourd, raw banana, sweet potato, and eggplant into batons. Lightly fry crunchy lentil dumplings " ,
+  "(bori) and set them aside. Sauté the bitter veggies first, then temper hot mustard oil and ghee with " ,
+  "radhuni (wild celery seeds) and ginger paste. Toss in the remaining vegetables, simmer gently with a " ,
+  "smooth paste of mustard seeds and ginger, and pour in milk for a creamy, subtle body. Simmer until the " ,
+  "vegetables are tender, then finish with the fried bori, a touch of sugar, and a generous dollop of " ,
+  "ghee for a bittersweet masterpiece."
   ],
   'cholar-dal': [
-    'ছোলার ডাল প্রেসার কুকারে ৩ কাপ জল, নুন, হলুদ ও কাঁচা লঙ্কা দিয়ে ৩টি সিটি দিয়ে সেদ্ধ করুন (ডাল নরম হবে কিন্তু গলে যাবে না)।',
-    'কড়াইতে ১ টেবিল চামচ ঘি গরম করে তাজা নারকেল কুচি সোনালি মুচমুচে করে ভেজে তুলে রাখুন।',
-    'বাকি ঘিয়ে তেজপাতা, শুকনো লঙ্কা, গোটা গরম মশলা ও হিং ফোড়ন দিন।',
-    'আদা বাটা, জিরে গুঁড়ো ও অল্প জল দিয়ে ঘি ছাড়া পর্যন্ত কষুন।',
-    'সেদ্ধ করা ডাল ঢেলে দিন। চিনি, চেরা কাঁচা লঙ্কা দিয়ে ৫–৭ মিনিট ফুটিয়ে ঘন ও চকচকে করুন।',
-    'ভাজা নারকেল কুচি ও তাজা গরম মশলা গুঁড়ো ছড়িয়ে দিন। উপর থেকে আরেক চামচ ঘি দিয়ে নামিয়ে নিন।'
+     "Celebrate festive mornings with Cholar Dal, a subtly sweet, aromatic Bengal gram delicacy traditionally " ,
+  "paired with hot luchis. To prepare, pressure-cook soaked chana dal with turmeric, salt, and sliced ginger " ,
+  "until the grains are completely tender yet perfectly retain their shape without turning mushy. In a pan, " ,
+  "shallow-fry tiny pieces of fresh coconut shards in hot ghee or mustard oil until they turn crisp and " ,
+  "golden brown, then set them aside. In the same aromatic oil, create a fragrant tempering (phoron) with " ,
+  "cumin seeds, bay leaves, dried red chilies, crushed green cardamoms, and a generous pinch of asafoetida " ,
+  "(hing). Pour this crackling tempering and the fried coconut into the simmering dal, adjust the sweetness " ,
+  "with a touch of sugar, and let it thicken. Finish with a final dusting of bhaja masala and a spoonful " ,
+  "of ghee for an authentic, rich finish."
   ],
   'luchi': [
-    'একটি পাত্রে ময়দা ও নুন মেশান। ২ টেবিল চামচ ঘি বা তেল (ময়ান) দিয়ে আঙুল দিয়ে ভালো করে ঘষে ঘষে মেশান।',
-    'অল্প অল্প করে কুসুম গরম জল দিয়ে নরম ও মসৃণ করে ৬–৮ মিনিট ঠেসে ময়দা মেখে নিন।',
-    'একটি ভেজা সুতির কাপড় দিয়ে ২০ মিনিট ঢেকে রাখুন।',
-    'লেবুর আকারের ছোট ছোট লেচি কেটে গোল করুন। বেলার সময় শুকনো ময়দা না দিয়ে তেল মেখে ৪ ইঞ্চি গোল করে বেলুন।',
-    'কড়াইতে সাদা তেল ভালো করে গরম করুন। বেলা লুচি সাবধানে গরম তেলে ছাড়ুন এবং ঝাঁঝরি হাতা দিয়ে আলতো চাপুন যাতে লুচি পুরোপুরি ফুলে ওঠে।',
-    'উল্টে দিয়ে মাত্র ৫ সেকেন্ড ভাজুন। তুলে কিচেন পেপারে রাখুন (লুচি ধবধবে সাদা থাকবে, লালচে হবে না)। গরম আলুর দম বা ছোলার ডালের সাথে পরিবেশন করুন।'
+     "Experience the ultimate comfort of Luchi, Bengal's beloved deep-fried puffed bread made from refined flour " ,
+  "(maida). To prepare, create a soft, pliable dough by mixing the flour with a generous dollop of ghee or oil " ,
+  "for shortening (moyen), a pinch of salt, and lukewarm water. Knead the dough meticulously until completely " ,
+  "smooth, then let it rest covered for at least twenty minutes. Divide the rested dough into small, smooth " ,
+  "balls (lechis) and roll them out gently into perfectly thin, even discs using a touch of oil to prevent " ,
+  "sticking. Slide the discs one by one into a wok of smoking hot oil, gently pressing down with a slotted spoon " ,
+  "until they instantly puff up into beautiful, snow-white, airy balloons. Flip briefly to cook both sides " ,
+  "without letting them brown, and serve piping hot alongside Alur Dom or Cholar Dal for a classic festive meal."
   ],
   'aloor-dom': [
-    'সেদ্ধ নতুন আলুর খোসা ছাড়িয়ে কাঁটাচামচ দিয়ে ফুটো করে নিন। শর্ষের তেলে নুন-হলুদ দিয়ে লালচে করে ভেজে তুলে রাখুন।',
-    'কড়াইতে গোটা জিরে, তেজপাতা, শুকনো লঙ্কা ও হিং ফোড়ন দিন।',
-    'আদা বাটা, টমেটো পেস্ট, হলুদ, কাশ্মীরি লঙ্কা ও জিরে গুঁড়ো দিয়ে মশলা থেকে তেল না বেরোনো পর্যন্ত কষান।',
-    'কড়াইশুঁটি ও ভাজা আলু দিয়ে মশলার সাথে ভালো করে মিশিয়ে নিন।',
-    '১ কাপ গরম জল ও নুন দিয়ে ঢাকা দিন এবং কম আঁচে ১০ মিনিট দমে বসিয়ে রাখুন।',
-    'ঢাকনা খুলে উপর থেকে ভাজা মশলার গুঁড়ো ও ধনেপাতা কুচি ছড়িয়ে পরিবেশন করুন।'
+    "Boil and lightly fry baby potatoes, ",
+    "then slow-cook them over a gentle flame ('dum') in a rich, thick gravy of tomatoes, ginger paste, and cumin,",
+    "flavored with green peas and finished with a pinch of sweet bhaja masala and fresh ghee."
   ],
-  'basanti-pulao': [
-    'গোবিন্দভোগ চাল হালকা হাতে ধুয়ে সুতির কাপড়ে ৩০ মিনিট ভালো করে শুকিয়ে নিন।',
-    'শুকনো চালের সাথে গাওয়া ঘি, আদা বাটা, হলুদ গুঁড়ো ও কেশর দুধ ভালো করে মাখিয়ে ২০ মিনিট রেখে দিন।',
-    'একটি পাত্রে ১ চামচ ঘি গরম করে কাজু ও কিশমিশ হালকা ভেজে তুলে রাখুন।',
-    'ঐ পাত্রেই তেজপাতা ও গোটা গরম মশলা ফোড়ন দিন।',
-    'ঘি-মাখানো চাল দিয়ে মৃদু আঁচে ৩–৪ মিনিট নাড়ুন যাতে চাল চকচকে হয়ে সুবাস বের হয়।',
-    'চালের ঠিক দ্বিগুণ পরিমাণ গরম জল (১:২ অনুপাতে) ও নুন ঢালুন। টগবগ করে ফুটতে দিন।',
-    'আঁচ একদম কমিয়ে শক্ত ঢাকনা দিয়ে ঢেকে দিন। ১০ মিনিট একদম নাড়বেন না।',
-    'ঢাকনা খুলে চিনি ও ভাজা কাজু-কিশমিশ কাঁটাচামচ দিয়ে হালকা হাতে মিশিয়ে দিন। আরও ৫ মিনিট দমে রাখুন।',
-    'গ্যাস বন্ধ করে ১০ মিনিট ভাপে রাখুন। চাল ঝরঝরে সুগন্ধি মুক্তোর মতো হয়ে উঠবে। কষা মাংসের সাথে পরিবেশন করুন।'
+  'pulao': [
+    "Marinate fragrant Gobindobhog rice with ghee, turmeric, and ginger paste, then stir-fry it gently with whole spices, cashews,",
+    " and raisins before simmering in a precise measure of warm water with sugar until the grains are fluffy, sweet, and bright yellow."
   ],
   'doi-maach': [
-    'মাছের টুকরোগুলোতে নুন ও হলুদ মাখিয়ে ১০ মিনিট রাখুন।',
-    'টক দই ১ চামচ ময়দা বা কর্নফ্লাওয়ার ও আধ কাপ জল দিয়ে ভালো করে ফেটিয়ে রাখুন (এতে ঝোলে দই ছানা কাটবে না)।',
-    'কড়াইতে শর্ষের তেল গরম করে মাছগুলো উভয় পিঠে মাত্র দেড় মিনিট হালকা ভেজে তুলে নিন।',
-    'ঐ তেলেই গোটা গরম মশলা ও তেজপাতা ফোড়ন দিয়ে পেঁয়াজ বাটা দিন। হালকা সোনালি করে ভেজে আদা-রসুন বাটা দিন।',
-    'আঁচ একদম কমিয়ে হলুদ, কাশ্মীরি লঙ্কা, নুন ও চিনি দিন।',
-    'ধীরে ধীরে ফেটানো টক দই ঢালতে থাকুন এবং অনবরত একমুখী নাড়ুন যাতে ঝোল মোলায়েম থাকে।',
-    'ভাজা মাছ ও চেরা কাঁচা লঙ্কা ঝোলে দিন। ঢাকা দিয়ে ৭–৮ মিনিট মাঝারি-কম আঁচে সেদ্ধ হতে দিন।',
-    'উপরে সামান্য ঘি ছড়িয়ে গরম ধোঁয়া ওঠা ভাতের সাথে পরিবেশন করুন।'
+     "Lightly fry turmeric-rubbed Rohu or Katla fish steaks,",
+    "then gently simmer them in a smooth, velvety sauce of whisked yogurt, ginger paste, and mild spices tempered with whole garam masala and bay leaves,",
+    " creating a wonderfully subtle, tangy, and aromatic classic."
   ],
   'bengali-chicken-curry': [
-    'মুরগির মাংস ১ টেবিল চামচ শর্ষের তেল, অর্ধেক আদা-রসুন বাটা, হলুদ ও লঙ্কা গুঁড়ো দিয়ে আধ ঘণ্টা ম্যারিনেট করুন।',
-    'কড়াইতে শর্ষের তেল গরম করে অর্ধেক করা বড় আলুর টুকরো সোনালি করে ভেজে তুলে রাখুন।',
-    'তেলে আধ চা চামচ চিনি ফেলে হালকা ক্যারামেল তৈরি করুন। তেজপাতা ও গোটা গরম মশলা ফোড়ন দিন।',
-    'কুচানো পেঁয়াজ দিয়ে লালচে করে ভাজুন। এরপর বাকি আদা-রসুন বাটা ও টমেটো কুচি দিয়ে তেল ছাড়া পর্যন্ত কষুন।',
-    'জিরে গুঁড়ো, ধনে গুঁড়ো, হলুদ ও কাশ্মীরি লঙ্কা দিয়ে মশলা ভালো করে কষান।',
-    'ম্যারিনেট করা মুরগির মাংস দিয়ে মাঝারি-উচ্চ আঁচে ৮–১০ মিনিট কষতে থাকুন।',
-    'ভাজা আলু ও আড়াই কাপ ফুটন্ত গরম জল দিন যাতে রবিবারের পাতলা লাল ঝোল তৈরি হয়।',
-    'ঢাকনা দিয়ে ১৫–১৮ মিনিট মাঝারি আঁচে মাংস নরম ও আলু তুলতুলে হওয়া পর্যন্ত ফোটান।',
-    'চেরা কাঁচা লঙ্কা ও গরম মশলা ছড়িয়ে গ্যাস বন্ধ করুন। গরম ভাত ও পাতিলেবু সহযোগে পরিবেশন করুন।'
+    "Marinate chicken pieces with yogurt, turmeric, chili powder, and mustard oil, then sear them in a pan alongside large halved potatoes,",
+    'simmer everything together in a deeply caramelized onion-ginger-garlic and tomato gravy until the meat is succulent ,',
+    " the potatoes are perfectly tender."
   ],
   'dhokar-dalna': [
-    'ভিজিয়ে রাখা ছোলার ডাল ২টি কাঁচা লঙ্কা ও নুন দিয়ে সামান্য জল দিয়ে আধা-বাটা করে ঘন পেস্ট বানান।',
-    'কড়াইতে তেল গরম করে হিং ও আদা বাটা দিন। ডাল বাটা দিয়ে কন্টিনিউয়াস নাড়তে থাকুন যতক্ষণ না মিশ্রণ কড়াই ছেড়ে মণ্ডের আকার নেয়।',
-    'তেল মাখানো থালায় ডালের মিশ্রণ ঢেলে ১ ইঞ্চি পুরু করে চৌকো করে চাপুন। ঠান্ডা হলে বরফি আকারে কাটুন।',
-    'শর্ষের তেলে ডালের বরফিগুলো (ধোঁকা) মুচমুচে সোনালি করে ভেজে তুলে রাখুন।',
-    'আলুর টুকরো ভেজে তুলুন। কড়াইতে গোটা জিরে, তেজপাতা ও গরম মশলা ফোড়ন দিয়ে টমেটো বাটা, আদা বাটা ও মশলা দিয়ে কষুন।',
-    '২ কাপ গরম জল ও নুন দিন। আলু সেদ্ধ হওয়া পর্যন্ত ফোটান।',
-    'ভেজে রাখা ধোঁকার টুকরোগুলো ঝোলে দিন এবং মাত্র ২–৩ মিনিট ফোটান (বেশি ফোটালে ধোঁকা ভেঙে যাবে)।',
-    'ঘি ও গরম মশলা ছড়িয়ে নামিয়ে গরম ভাতের সাথে পরিবেশন করুন।'
+    "Grind soaked chana dal into a paste, sauté it with ginger, asafoetida, and cumin,",
+    'then steam and cut the mixture into diamond cakes to deep-fry until crisp before simmering them with potato cubes in a rich,',
+    'comforting ginger-cumin and tomato gravy finished with ghee."
   ],
   'begun-bhaja': [
-    'বেগুন মোটা গোল গোল চাকা করে কাটুন। উভয় পিঠে ছুরি দিয়ে হালকা ডায়মন্ড কাট দাগ কাটুন।',
-    'হলুদ গুঁড়ো, কাশ্মীরি লঙ্কা গুঁড়ো, চালের গুঁড়ো (মুচমুচে করার জন্য), নুন ও চিনি মাখিয়ে ৫ মিনিট রেখে দিন।',
-    'তাওয়া বা প্যানে শর্ষের তেল গরম করুন।',
-    'মসলা মাখানো বেগুনের টুকরোগুলো দিয়ে মাঝারি-কম আঁচে ৩ মিনিট ঢেকে দিন যাতে ভেতরটা নরম ও ভাপে সেদ্ধ হয়।',
-    'ঢাকনা খুলে উল্টে দিন এবং উন্মুক্ত অবস্থায় সোনালি মুচমুচে ক্রাস্ট তৈরি হওয়া পর্যন্ত ভাজুন।',
-    'খিচুড়ি বা ধোঁয়া ওঠা ভাতের সাথে গরম গরম পরিবেশন করুন।'
+    "Slice round eggplants into thick discs, marinate them generously with turmeric, salt, and a pinch of sugar, then shallow-fry them in hot, ',
+    'smoking mustard oil until the exterior turns beautifully caramelized and crisp while the inside becomes completely soft and melt-in-your-mouth tender."
   ],
   'khichuri': [
-    'শুকনো কড়াইতে সোনা মুগ ডাল লালচে সোনালি ও সুবাসিত হওয়া পর্যন্ত ভাজুন। গোবিন্দভোগ চাল ও ভাজা ডাল একসাথে ধুয়ে জল ঝরিয়ে নিন।',
-    'ফুলকপির টুকরো ও ডুমো আলু শর্ষের তেলে সোনালি করে ভেজে তুলে রাখুন।',
-    'ভারী হাঁড়িতে ঘি ও তেল গরম করে গোটা জিরে, তেজপাতা, শুকনো লঙ্কা ও গোটা গরম মশলা ফোড়ন দিন।',
-    'আদা বাটা, জিরে গুঁড়ো, হলুদ ও কাশ্মীরি লঙ্কা দিয়ে কষান।',
-    'ধুয়ে রাখা চাল ও ডাল দিয়ে মশলার সাথে ৩ মিনিট হালকা ভেজে নিন।',
-    '৫ কাপ ফুটন্ত গরম জল ও নুন ঢালুন। মাঝারি আঁচে ঢাকা দিয়ে ১২ মিনিট রান্না করুন।',
-    'ভাজা ফুলকপি, আলু, কড়াইশুঁটি, চিনি ও চেরা কাঁচা লঙ্কা যোগ করুন। কম আঁচে আরও ৮ মিনিট দমে রাখুন।',
-    'নামানোর আগে ২ চামচ গাওয়া ঘি ও গরম মশলা ছড়িয়ে দিন। বেগুন ভাজা ও লাবড়ার সাথে পরিবেশন করুন।'
+    "Dry-roast aromatic Sona Moong dal until golden,',
+    'then wash and boil it along with Gobindobhog rice, diced potatoes, cauliflower, and green peas in a pot tempered with ghee, cumin seeds, and whole spices,',
+    'finished with a paste of ginger and green chilies for the ultimate rainy-day comfort food."
   ],
-  'mishti-doi': [
-    'টক দই একটি সুতির কাপড়ে ঝুলিয়ে ৩০ মিনিট জল ঝরিয়ে নিন।',
-    'একটি ভারী পাত্রে ১ লিটার দুধ ফুটিয়ে ঘন করে প্রায় ৬৫০ মিলিলিটার করুন। এতে ১/২ কাপ চিনি গুলিয়ে নিন।',
-    'আরেকটি ছোট প্যানে ১/৪ কাপ চিনি ও ১ চামচ জল দিয়ে না নেড়ে ক্যারামেল বানান।',
-    'ক্যারামেলে আধ কাপ গরম দুধ সাবধানে মিশিয়ে গলিয়ে নিন এবং মূল দুধের সাথে মিশিয়ে টেরাকোটা সোনালি রঙ আনুন।',
-    'দুধটি কুসুম গরম হওয়া পর্যন্ত ঠান্ডা হতে দিন (আঙুল ডোবালে আরামদায়ক গরম লাগবে)।',
-    'জল ঝরানো দই ফেটিয়ে কুসুম গরম দুধে ভালো করে মিশিয়ে দিন।',
-    'মাটির ভাঁড়ে বা সিরামিক পাত্রে ঢেলে ফয়েল দিয়ে মুড়ে গরম জায়গায় ৮–১০ ঘণ্টা বসিয়ে রাখুন।',
-    'দই জমে গেলে ফ্রিজে ৩ ঘণ্টা রেখে ঠান্ডা করে পরিবেশন করুন।'
-  ],
+  
   'nolen-gur-payesh': [
-    'গোবিন্দভোগ চাল ধুয়ে ১ চামচ ঘি মাখিয়ে ১৫ মিনিট রেখে দিন।',
-    'একটি পাত্রে দুধ, তেজপাতা ও এলাচ দিয়ে ফুটিয়ে সামান্য ঘন করুন।',
-    'ঘি-মাখানো চাল ফুটন্ত দুধে দিন। নিচে যাতে না লাগে তাই ঘন ঘন নাড়তে থাকুন।',
-    'চাল নরম ও সেদ্ধ না হওয়া পর্যন্ত ২৫ মিনিট মৃদু আঁচে রান্না করুন।',
-    'গ্যাস একদম বন্ধ করুন বা আঁচ কমিয়ে দিন। দুধ সামান্য ঠান্ডা হতে ৩ মিনিট সময় দিন (ফুটন্ত দুধে গুড় দিলে দুধ ফেটে যেতে পারে)।',
-    'নলেন গুড় বা পাটালি গুলিয়ে ধীরে ধীরে মিশিয়ে নিন যাতে সোনালি রঙ ধরে।',
-    'কাজু-কিশমিশ ছড়িয়ে আরও ২ মিনিট হালকা আঁচে নেড়ে মাটির পাত্রে পরিবেশন করুন।'
+     "Slow-cook aromatic Gobindobhog rice in full-cream reduced milk until the grains are completely tender',
+    'then take the pot off the flame to gently stir in liquid nolen gur (date palm jaggery) for a luxurious,',
+    ' amber-hued winter pudding flavored with ghee-fried cashews and raisins."
   ],
   'patishapta': [
-    'পুর তৈরি: কোরানো নারকেল ও নলেন গুড় কড়াইতে ১০ মিনিট পাক দিন। খোয়া ক্ষীর ও এলাচ গুঁড়ো মিশিয়ে নরম পুর তৈরি করে ঠান্ডা করুন।',
-    'ব্যাটার তৈরি: ময়দা, চালের গুঁড়ো, সুজি ও কুসুম গরম দুধ মিশিয়ে পাতলা ক্রিপ ব্যাটার তৈরি করুন।',
-    'নন-স্টিক তাওয়ায় বেগুনের বোঁটা দিয়ে সামান্য ঘি মাখিয়ে নিন।',
-    'এক হাতা ব্যাটার তাওয়ায় ফেলে গোল করে ছড়িয়ে দিন। ওপরের দিকটা শুকনো হলে একপাশে নারকেলের পুর দিন।',
-    'খুন্তি দিয়ে পাটিসাপটার মতো মুড়ে রোলের আকার দিন।',
-    'প্লেটে তুলে গরম বা ঠান্ডা অবস্থায় পরিবেশন করুন।'
+     "Whisk refined flour, semolina, and rice flour with milk and jaggery into a smooth, thin batter, ladle it onto a greased griddle to form delicate crepes",
+    "then stuff them with a rich filling of coconut or kheer cooked with date palm jaggery before rolling them into tight, sweet logs."
   ],
   'machher-jhol': [
-    'মাছের পেটি নুন-হলুদ মাখিয়ে শর্ষের তেলে দেড় মিনিট হালকা ভেজে তুলে নিন।',
-    'আলু ও পটলের টুকরো হালকা সোনালি করে ভেজে আলাদা রাখুন।',
-    'তেলে পাঁচফোড়ন ও চেরা কাঁচা লঙ্কা ফোড়ন দিন।',
-    'আদা-জিরে বাটা দিয়ে ১ মিনিট কষান। আড়াই কাপ গরম জল ও নুন দিন।',
-    'ভাজা সবজি ও মাছের টুকরো দিয়ে ৭ মিনিট ফুটিয়ে পাতলা সুস্বাদু ঝোল নামিয়ে নিন। ধনেপাতা ছড়িয়ে পরিবেশন করুন।'
+    "Lightly fry turmeric-marinated fish steaks, ',
+    'then simmer them along with elongated potato wedges and pointed gourds in a comforting, watery gravy tempered with kalonji (nigella seeds),",
+    " flavored with a paste of ginger and cumin, and finished with fresh green chilies."
   ],
   'ghugni': [
-    'ভিজিয়ে রাখা হলুদ মটর ও আলু প্রেসার কুকারে নুন-হলুদ দিয়ে সেদ্ধ করে নিন।',
-    'কড়াইতে শর্ষের তেল গরম করে পেঁয়াজ কুচি, আদা-রসুন বাটা ও টমেটো দিয়ে কষুন।',
-    'জিরে গুঁড়ো, ধনে গুঁড়ো ও সেদ্ধ মটর জলের সমেত দিয়ে ১০ মিনিট ফোটান।',
-    'তেঁতুলের জল ও ভাজা নারকেল কুচি মেশান।',
-    'বাটিতে ঢেলে উপর থেকে পেঁয়াজ কুচি, কাঁচা লঙ্কা ও ভাজা মশলার গুঁড়ো ছড়িয়ে লুচি বা পাউরুটির সাথে পরিবেশন করুন।'
+    "Boil soaked dried yellow peas until tender,",
+    " then simmer them in a vibrant, spiced gravy of onions, ginger, garlic, tomatoes, and diced potatoes, ",
+    "finishing with a garnish of fresh coriander, chopped green chilies, and a squeeze of tangy lime juice."
   ],
   'aam-dal': [
-    'মুসুর ডাল জল, নুন ও হলুদ দিয়ে নরম করে সেদ্ধ করুন।',
-    'কাঁচা আমের টুকরো ডালে দিয়ে ৫ মিনিট সেদ্ধ হতে দিন।',
-    'ছোট প্যানে শর্ষের তেল গরম করে শুকনো লঙ্কা ও কালো শর্ষে ফোড়ন দিন।',
-    'ফোড়ন ডালে ঢেলে চিনি দিয়ে টক-মিষ্টি স্বাদ ব্যালেন্স করুন। গরম ভাতের সাথে পরিবেশন করুন।'
+    "Boil red lentils (masoor dal) or yellow lentils (moong dal) with turmeric and salt,",
+    " then simmer with sliced tangy green mangoes and temper with mustard oil, ",
+    "pungent black mustard seeds, and dried red chilies for a refreshing, cooling summer delicacy."
   ],
   'chhanar-dalna': [
-    'তাজা ছানা, সামান্য ময়দা ও নুন দিয়ে হাতের তালু দিয়ে ৫ মিনিট মেখে মসৃণ করুন এবং গোল বড়ার আকারে তৈরি করুন।',
-    'তেলে ছানার বড়াগুলো হালকা সোনালি করে ভেজে নিন।',
-    'আলু ভেজে তুলে গোটা জিরে, টমেটো বাটা, আদা বাটা ও গুঁড়ো মশলা দিয়ে কষান।',
-    'জল দিয়ে আলু সেদ্ধ করুন। এরপর ছানার বড়াগুলো দিয়ে মাত্র ২ মিনিট ফুটিয়ে ঘি-গরম মশলা দিয়ে নামিয়ে নিন।'
+  "Knead fresh chenna with a touch of flour and cumin powder,",
+    " shape into small cubes or balls and fry until golden, then simmer them along with diced potatoes in a light,",
+    " comforting ginger-cumin tomato gravy finished with ghee and garam masala."
   ],
   'singara': [
-    'ময়দায় কালো জিরে, নুন ও তেল দিয়ে শক্ত ময়ান মেখে ২০ মিনিট রাখুন।',
-    'আলু ও ছোট ফুলকপির টুকরো পাঁচফোড়ন, আদা, বাদাম ও ভাজা মশলা দিয়ে শুকিয়ে পুর তৈরি করুন।',
-    'লেচি বেলে অর্ধেক কেটে কোণ তৈরি করে পুর ভরুন এবং মুখ আটকে দিন।',
-    'হালকা গরম তেলে কম আঁচে ১২–১৫ মিনিট মুচমুচে সোনালি করে ভেজে আদা চা ও চাটনির সাথে পরিবেশন করুন।'
+   "Incorporate ghee into flour to create a flaky dough, ",
+    "fill it with a savory mixture of diced potatoes, green peas, fried peanuts, and a special bhaja masala, fold into tight triangles, ",
+    "deep-fry slowly on low heat until ultra-crisp and golden brown."
   ],
   'mochar-ghonto': [
-    'মোচা কেটে হলুদ জলে সেদ্ধ করে হালকা মেখে নিন।',
-    'তেলে ডালের বড়ি ও ডুমো আলু ভাজুন।',
-    'আদা-জিরে বাটা কষিয়ে সেদ্ধ মোচা ও নারকেল কোরা দিয়ে শুকনো করে ভাজুন। বড়ি ও ঘি দিয়ে নামান।'
+    "Finely chop and boil banana blossoms with turmeric, then sauté them in mustard oil with diced potatoes, tempered with cumin and bay leaves,",
+    ' before simmering with a paste of ginger, cumin, and coconut shards, finished with ghee and fried lentil dumplings (bori)."
   ],
   'rui-kalia': [
-    'রুই মাছের পেটি নুন-হলুদ মাখিয়ে তেলে সোনালি করে ভেজে তুলে নিন।',
-    'বেরেস্তা (ভাজা পেঁয়াজ), টক দই ও আদা-রসুন বেটে পেস্ট তৈরি করুন।',
-    'তেল ও ঘিয়ে তেজপাতা ও গোটা গরম মশলা ফোড়ন দিয়ে পেস্টটি কষান।',
-    'মশলা থেকে তেল ছাড়লে জল, কিশমিশ ও ভাজা মাছ দিয়ে ৮ মিনিট ফুটিয়ে উপরে বেরেস্তা ছড়িয়ে নামিয়ে নিন।'
+     "Deep-fry thick steaks of Rohu fish until golden crisp",
+    " then simmer them in a rich, spicy, and deeply caramelized gravy made from fried onions, ginger-garlic paste, tomatoes, and a whisk of yogurt, ",
+    "finished with a touch of ghee and whole green chilies."
   ],
   'mutton-rezala': [
-    'পাঁঠার মাংস সেদ্ধ পেঁয়াজ বাটা, টক দই ও আদা-রসুন দিয়ে ম্যারিনেট করে রাখুন।',
-    'ঘি ও তেলে গোটা গরম মশলা ও শুকনো লঙ্কা ফোড়ন দিয়ে মাংস দিন।',
-    'কাজু-পোস্ত বাটা ও গরম জল দিয়ে কম আঁচে ৫০ মিনিট নরম হওয়া পর্যন্ত রান্না করুন।',
-    'মাখানা, গোলমরিচ গুঁড়ো, কেওড়া জল ও মিঠা আতর ছড়িয়ে ঢেকে রেখে রুমালি রুটির সাথে পরিবেশন করুন।'
+    "Marinate tender mutton pieces in yogurt, onion paste, and ginger-garlic, then slow-cook the meat in a fragrant, white, cashew-nut and poppy-seed gravy infused with whole spices,",
+    "dried red chilies, kewra water, and makhana for a rich, aromatic Nawabi delicacy."
   ],
-  'radhaballabhi': [
-    'ভিজিয়ে রাখা বিউলির ডাল মিহি করে বাটুন। কড়াইতে হিং, আদা বাটা ও মৌরি গুঁড়ো দিয়ে ডাল শুকিয়ে পুর বানান।',
-    'ময়দার লেচিতে ডালের পুর ভরে সাবধানে বেলে নিন।',
-    'গরম তেলে লুচির মতো ভেজে আলুর দমের সাথে পরিবেশন করুন।'
+'rasmali':[
+  "Flatten fresh chenna (paneer) balls and boil them in a light sugar syrup, ",
+  "then drain and soak the spongy discs in a rich,",
+  " reduced milk (rabri) infused with saffron, cardamom, and a shower of chopped pistachios."
   ],
   'rasgulla': [
-    'গরুর দুধে লেবুর রস দিয়ে ছানা কাটিয়ে জল ঝরিয়ে নিন।',
-    'হাতের তালু দিয়ে ছানা ৭ মিনিট মেখে নরম গোল্লা বানান।',
-    'পাত্রে চিনি ও জল দিয়ে রস ফুটিয়ে ছানার বলগুলো দিন এবং ঢাকা দিয়ে তীব্র আঁচে ১২ মিনিট সেদ্ধ করুন।',
-    'রসে ঠান্ডা হতে দিয়ে রসে টইটম্বুর রসগোল্লা পরিবেশন করুন।'
+    "Knead fresh, well-drained chenna (paneer) until completely smooth and lump-free,",
+    " roll into soft, crack-free balls, and boil them in a light,",
+    " simmering cardamom-scented sugar syrup until they double in size and become incredibly spongy, airy, and juicy."
   ],
-  'aam-pora-sharbat': [
-    'কাঁচা আম গ্যাসে বা আগুনে পুড়িয়ে খোসা ছাড়িয়ে নিন।',
-    'পোড়া আমের ক্বাথ বিট নুন, চিনি, ভাজা জিরে গুঁড়ো ও পুদিনা দিয়ে ব্লেন্ড করুন।',
-    'বরফ ও ঠান্ডা জল মিশিয়ে গ্লাসে পরিবেশন করুন।'
-  ],
+ 
   'potoler-dolma': [
-    'পটলের ভেতর থেকে চামচ দিয়ে বীজ বের করে নিন।',
-    'ছানা, কিশমিশ ও মশলা দিয়ে পুর বানিয়ে পটলের ভেতরে ভরুন।',
-    'পুরভরা পটল তেলে ভেজে মশলাদার গ্রেভিতে ৬ মিনিট রান্না করুন।'
+    "Scrape pointed gourds and scoop out the seeds, stuff them with a savory filling of spiced paneer or minced prawns,",
+    " lightly fry them, and then simmer the stuffed gourds in a rich,",
+    " fragrant ginger-cumin and tomato gravy."
   ],
-  'steamed-bhaat': [
-    'গোবিন্দভোগ চাল ধুয়ে ফুটন্ত জলে ১০–১২ মিনিট সেদ্ধ করুন।',
-    'ফ্যান (ভাতের মাড়) ভালো করে ঝরিয়ে নিন।',
-    'গরম ভাতে ঘি ও কাঁচা লঙ্কা দিয়ে পরিবেশন করুন।'
+  'steamed-rice': [
+     "Wash fragrant long-grain or Gobindobhog rice until the water runs clear",
+    " boil it in a pot of abundant bubbling water until the grains are tender yet separate, and drain the starchy water completely to achieve a fluffy,",
+    " piping-hot bed ready to soak up rich gravies."
   ],
-  'labra': [
-    'শর্ষের তেলে তেজপাতা, শুকনো লঙ্কা ও পাঁচফোড়ন ফোড়ন দিন।',
-    'সব শক্ত সবজি (আলু, রাঙা আলু, মুলো, কাঁচকলা) ৫ মিনিট ভাজুন।',
-    'কুমড়ো, শিম ও বেগুন দিয়ে আদা বাটা ও গুঁড়ো মশলা দিয়ে ঢাকা দিয়ে রান্না করুন।',
-    'সবজি নরম হলে চিনি ও চেরা কাঁচা লঙ্কা দিন। ঘি ও রাধুনি গুঁড়ো ছড়িয়ে নামিয়ে নিন।'
+  'misti doi':[
+   "finale of a Bengali feast with Mishti Doi, a luxurious, thick, and " ,
+  "creamy caramelized sweet yogurt. To prepare, slowly reduce full-fat milk over a gentle flame until " ,
+  "thickened. In a separate pan, melt sugar until it transforms into a deep, amber-golden caramel, then " ,
+  "carefully whisk it into the hot milk to impart its signature rich color and smoky sweetness. Once the " ,
+  "milk cools to a lukewarm temperature, whisk in a smooth dollop of hung curd as a starter culture. " ,
+  "Pour the mixture into traditional unglazed earthen pots, which absorb excess moisture, and let it ferment " ,
+  "in a warm, undisturbed spot for 8 to 12 hours until perfectly set and chilled before serving."
   ],
+  
   'sandesh': [
-    'তাজা ছানা হাতের তালু দিয়ে মেখে মোলায়েম করুন।',
-    'অর্ধেক ছানা নলেন গুড় দিয়ে নন-স্টিক কড়াইতে কম আঁচে ৫ মিনিট পাক দিন।',
-    'বাকি কাঁচা ছানা ও এলাচ গুঁড়ো মিশিয়ে শাঁখের ছাঁচে ফেলে সন্দেশ বানান।'
+   " Knead fresh paneer until perfectly smooth,",
+    " cook it briefly on a low flame with sugar or jaggery and cardamom,",
+    "then press the warm mixture into molds to set."
   ]
 };
