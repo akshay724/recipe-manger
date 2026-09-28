@@ -1,6 +1,6 @@
 export const RECIPE_BENGALI_INSTRUCTIONS: Record<string, string[]> = {
 
-shorshe_ilish_recipe = [
+'shorshe_ilish_recipe' : [
     'Experience the culinary crown jewel of Bengal with Shorshe Ilish, a sublime harmony of tender ',
     "Hilsa fish and a pungent, velvety mustard gravy. To prepare, marinate fresh Hilsa steaks with ",
     "turmeric and salt. In a blender, grind soaked yellow and black mustard seeds with fiery green ",
@@ -38,7 +38,7 @@ shorshe_ilish_recipe = [
   "the slow, patient process of 'kosha'—continuous slow-cooking and stirring with fried onions and tomatoes " ,
   "until the moisture evaporates and the meat turns melt-in-your-mouth tender. Finished with a touch of " ,
   "ghee and Bengali garam masala, this dark, glorious masterpiece is traditionally devoured with hot " ,
-  "luchis or fragrant basmati pulao.";
+  "luchis or fragrant basmati pulao."
   ],
   'shukto': [
    "Begin your traditional Bengali feast with Shukto, a soothing, bittersweet vegetable stew crafted " ,
@@ -93,22 +93,22 @@ shorshe_ilish_recipe = [
   'dhokar-dalna': [
     "Grind soaked chana dal into a paste, sauté it with ginger, asafoetida, and cumin,",
     'then steam and cut the mixture into diamond cakes to deep-fry until crisp before simmering them with potato cubes in a rich,',
-    'comforting ginger-cumin and tomato gravy finished with ghee."
+    "comforting ginger-cumin and tomato gravy finished with ghee."
   ],
   'begun-bhaja': [
-    "Slice round eggplants into thick discs, marinate them generously with turmeric, salt, and a pinch of sugar, then shallow-fry them in hot, ',
-    'smoking mustard oil until the exterior turns beautifully caramelized and crisp while the inside becomes completely soft and melt-in-your-mouth tender."
+    "Slice round eggplants into thick discs, marinate them generously with turmeric, salt, and a pinch of sugar, then shallow-fry them in hot, ",
+    "smoking mustard oil until the exterior turns beautifully caramelized and crisp while the inside becomes completely soft and melt-in-your-mouth tender."
   ],
   'khichuri': [
-    "Dry-roast aromatic Sona Moong dal until golden,',
+    "Dry-roast aromatic Sona Moong dal until golden,",
     'then wash and boil it along with Gobindobhog rice, diced potatoes, cauliflower, and green peas in a pot tempered with ghee, cumin seeds, and whole spices,',
-    'finished with a paste of ginger and green chilies for the ultimate rainy-day comfort food."
+    "finished with a paste of ginger and green chilies for the ultimate rainy-day comfort food."
   ],
   
   'nolen-gur-payesh': [
-     "Slow-cook aromatic Gobindobhog rice in full-cream reduced milk until the grains are completely tender',
+     "Slow-cook aromatic Gobindobhog rice in full-cream reduced milk until the grains are completely tender,",
     'then take the pot off the flame to gently stir in liquid nolen gur (date palm jaggery) for a luxurious,',
-    ' amber-hued winter pudding flavored with ghee-fried cashews and raisins."
+    " amber-hued winter pudding flavored with ghee-fried cashews and raisins."
   ],
   'patishapta': [
      "Whisk refined flour, semolina, and rice flour with milk and jaggery into a smooth, thin batter, ladle it onto a greased griddle to form delicate crepes",
@@ -116,7 +116,7 @@ shorshe_ilish_recipe = [
   ],
   'machher-jhol': [
     "Lightly fry turmeric-marinated fish steaks, ',
-    'then simmer them along with elongated potato wedges and pointed gourds in a comforting, watery gravy tempered with kalonji (nigella seeds),",
+    "then simmer them along with elongated potato wedges and pointed gourds in a comforting, watery gravy tempered with kalonji (nigella seeds),",
     " flavored with a paste of ginger and cumin, and finished with fresh green chilies."
   ],
   'ghugni': [
@@ -141,7 +141,7 @@ shorshe_ilish_recipe = [
   ],
   'mochar-ghonto': [
     "Finely chop and boil banana blossoms with turmeric, then sauté them in mustard oil with diced potatoes, tempered with cumin and bay leaves,",
-    ' before simmering with a paste of ginger, cumin, and coconut shards, finished with ghee and fried lentil dumplings (bori)."
+    " before simmering with a paste of ginger, cumin, and coconut shards, finished with ghee and fried lentil dumplings (bori)."
   ],
   'rui-kalia': [
      "Deep-fry thick steaks of Rohu fish until golden crisp",
