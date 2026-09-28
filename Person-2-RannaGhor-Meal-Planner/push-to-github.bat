@@ -3,7 +3,7 @@ title Push Person 2 RannaGhor to GitHub
 color 0A
 cls
 echo ======================================================================
-echo       RannaGhor Project - GitHub Push Helper (Person 2)
+echo       RannaGhor Project - GitHub Push Helper 
 echo       Module: Weekly Meal Planner, Household Rhythms & Smart Routine Generator
 echo ======================================================================
 echo.
