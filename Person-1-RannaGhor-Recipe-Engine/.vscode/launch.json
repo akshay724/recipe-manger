@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Edge (Person 1 - Recipe Engine)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:5171",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "npm: dev (Person 1 Recipe Engine)"
+    },
+    {
+      "name": "Launch Chrome (Person 1 - Recipe Engine)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5171",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "npm: dev (Person 1 Recipe Engine)"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Edge (Person 2 - Meal Planner)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:5172",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "npm: dev (Person 2 Meal Planner)"
+    },
+    {
+      "name": "Launch Chrome (Person 2 - Meal Planner)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5172",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "npm: dev (Person 2 Meal Planner)"
+    }
+  ]
+}
