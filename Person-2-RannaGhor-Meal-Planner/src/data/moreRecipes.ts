@@ -4,7 +4,7 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
   {
     id: 'mochar-ghonto',
     name: 'Mochar Ghonto',
-    bengaliName: 'Mochar Ghonto',
+    bengaliName: 'মোচার ঘণ্ট',
     tagline: 'Intricate banana blossom stir-fry with coconut, potatoes & bori.',
     story: 'An artistic jewel of traditional Bengali vegetarian cuisine. Cleaning and finely chopping fresh banana blossoms (mocha) is a cherished communal morning ritual among mothers and grandmothers, transforming humble banana flowers into a spiced masterpiece with fried coconut slivers and crispy dal bori.',
     image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&q=80',
@@ -22,14 +22,14 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
     season: 'All-year',
     festivalTags: ['Bengali Heritage', 'Sunday Vegetarian Feast'],
     ingredients: [
-      { name: 'Banana blossom (Mocha), finely chopped & boiled', bengaliName: 'boiled mocha', quantity: 1, unit: 'pcs', category: 'Vegetables' },
-      { name: 'Potatoes, diced', bengaliName: 'diced potato', quantity: 1, unit: 'cup', category: 'Vegetables' },
-      { name: 'Grated fresh coconut', bengaliName: 'greated coconut', quantity: 0.5, unit: 'cup', category: 'Vegetables' },
-      { name: 'Dal Bori (lentil nuggets)', bengaliName: 'dal bori', quantity: 8, unit: 'pcs', category: 'Pantry' },
-      { name: 'Ginger-cumin paste', bengaliName: 'Ginger-cumin paste', quantity: 1.5, unit: 'tbsp', category: 'Spices' },
-      { name: 'Ghee & Garam Masala', bengaliName: 'Ghee & Garam Masala', quantity: 1, unit: 'tbsp', category: 'Dairy & Sweets' },
-      { name: 'Mustard oil', bengaliName: 'sorser tel', quantity: 2.5, unit: 'tbsp', category: 'Pantry' },
-      { name: 'Sugar & Salt', bengaliName: 'sugar and salt', quantity: 1, unit: 'tsp', category: 'Pantry' }
+      { name: 'Banana blossom (Mocha), finely chopped & boiled', bengaliName: 'সেদ্ধ মোচা', quantity: 1, unit: 'pcs', category: 'Vegetables' },
+      { name: 'Potatoes, diced', bengaliName: 'ছোট আলু', quantity: 1, unit: 'cup', category: 'Vegetables' },
+      { name: 'Grated fresh coconut', bengaliName: 'কোরানো নারকেল', quantity: 0.5, unit: 'cup', category: 'Vegetables' },
+      { name: 'Dal Bori (lentil nuggets)', bengaliName: 'ডালের বড়ি', quantity: 8, unit: 'pcs', category: 'Pantry' },
+      { name: 'Ginger-cumin paste', bengaliName: 'আদা ও জিরে বাটা', quantity: 1.5, unit: 'tbsp', category: 'Spices' },
+      { name: 'Ghee & Garam Masala', bengaliName: 'গাওয়া ঘি ও গরম মশলা', quantity: 1, unit: 'tbsp', category: 'Dairy & Sweets' },
+      { name: 'Mustard oil', bengaliName: 'শর্ষের তেল', quantity: 2.5, unit: 'tbsp', category: 'Pantry' },
+      { name: 'Sugar & Salt', bengaliName: 'চিনি ও নুন', quantity: 1, unit: 'tsp', category: 'Pantry' }
     ],
     instructions: [
       'Soak chopped mocha in turmeric water, then pressure-cook with salt until tender. Drain thoroughly and mash slightly.',
@@ -48,7 +48,7 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
   {
     id: 'rui-kalia',
     name: 'Rui Maacher Kalia',
-    bengaliName: 'Rui Maacher Kalia',
+    bengaliName: 'রুই মাছের কালিয়া',
     tagline: 'Rich, grand Bengali wedding-style carp curry in spiced onion-raisin gravy.',
     story: 'The celebratory crescendo of traditional Bengali wedding feasts (Biyebarir Ranna). Large cuts of fresh sweetwater Rohu or Katla are braised in a luxurious, caramelized onion, ginger, and yogurt sauce studded with golden sultanas and whole aromatic spices.',
     image: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1000&q=80',
@@ -67,14 +67,14 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
     season: 'All-year',
     festivalTags: ['Biyebari Feast', 'Poila Boishakh', 'Durga Puja Nabami'],
     ingredients: [
-      { name: 'Rohu or Katla fish steaks', bengaliName: 'Rohu or Katla fish steaks', quantity: 600, unit: 'g', category: 'Fish & Meat' },
-      { name: 'Sliced & fried onions (Beresta)', bengaliName: 'Beresta', quantity: 0.75, unit: 'cup', category: 'Vegetables' },
-      { name: 'Ginger-garlic paste', bengaliName: 'Ginger-garlic paste', quantity: 2, unit: 'tbsp', category: 'Spices' },
-      { name: 'Beaten curd', bengaliName: 'curd', quantity: 3, unit: 'tbsp', category: 'Dairy & Sweets' },
-      { name: 'Kishmish (Raisins)', bengaliName: 'raisins', quantity: 2, unit: 'tbsp', category: 'Pantry' },
-      { name: 'Mustard oil & Ghee', bengaliName: 'Mustard oil & Ghee', quantity: 4, unit: 'tbsp', category: 'Pantry' },
-      { name: 'Whole Garam Masala & Bay leaf', bengaliName: 'Whole Garam Masala & Bay leaf', quantity: 1, unit: 'tbsp', category: 'Spices' },
-      { name: 'Kashmiri red chilli & Turmeric', bengaliName: 'Kashmiri red chilli & Turmeric', quantity: 1.5, unit: 'tsp', category: 'Spices' }
+      { name: 'Rohu or Katla fish steaks', bengaliName: 'রুই মাছের পেটি', quantity: 600, unit: 'g', category: 'Fish & Meat' },
+      { name: 'Sliced & fried onions (Beresta)', bengaliName: 'বেরেস্তা', quantity: 0.75, unit: 'cup', category: 'Vegetables' },
+      { name: 'Ginger-garlic paste', bengaliName: 'আদা-রসুন বাটা', quantity: 2, unit: 'tbsp', category: 'Spices' },
+      { name: 'Beaten curd', bengaliName: 'টক দই', quantity: 3, unit: 'tbsp', category: 'Dairy & Sweets' },
+      { name: 'Kishmish (Raisins)', bengaliName: 'কিশমিশ', quantity: 2, unit: 'tbsp', category: 'Pantry' },
+      { name: 'Mustard oil & Ghee', bengaliName: 'শর্ষের তেল ও ঘি', quantity: 4, unit: 'tbsp', category: 'Pantry' },
+      { name: 'Whole Garam Masala & Bay leaf', bengaliName: 'গোটা গরম মশলা ও তেজপাতা', quantity: 1, unit: 'tbsp', category: 'Spices' },
+      { name: 'Kashmiri red chilli & Turmeric', bengaliName: 'কাশ্মীরি লঙ্কা ও হলুদ গুঁড়ো', quantity: 1.5, unit: 'tsp', category: 'Spices' }
     ],
     instructions: [
       'Marinate fish steaks with salt and turmeric. Shallow fry in mustard oil until crisp golden outside; set aside.',
@@ -94,7 +94,7 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
   {
     id: 'mutton-rezala',
     name: 'Kolkata Mutton Rezala',
-    bengaliName: 'Kolkata Mutton Rezala',
+    bengaliName: 'কলকাতার মটন রেজালা',
     tagline: 'Mughlai-Bengali white mutton curry scented with kewra, cashew-poppy paste & makhana.',
     story: 'Introduced to Bengal during the exile of Nawab Wajid Ali Shah to Metiabruz, Kolkata Rezala is a sublime fragrant white curry. Succulent mutton pieces are poached in a satin-smooth gravy of yogurt, cashew nut paste, poppy seeds, and whole dried Kashmiri chillies, perfumed with kewra water.',
     image: 'https://images.unsplash.com/photo-1545247181-516773ca83e3?auto=format&fit=crop&w=1000&q=80',
@@ -112,14 +112,14 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
     season: 'Winter',
     festivalTags: ['Eid Delicacy', 'Durga Puja Night Out', 'Mughlai Heritage'],
     ingredients: [
-      { name: 'Mutton (Goat meat)', bengaliName: 'mutton', quantity: 600, unit: 'g', category: 'Fish & Meat' },
-      { name: 'Whisked yogurt (Tok doi)', bengaliName: 'curd', quantity: 1, unit: 'cup', category: 'Dairy & Sweets' },
-      { name: 'Cashew nut & Poppy seed paste', bengaliName: 'Cashew nut & Poppy seed paste', quantity: 3, unit: 'tbsp', category: 'Spices' },
-      { name: 'Dry whole red chillies', bengaliName: 'Dry whole red chillies', quantity: 5, unit: 'pcs', category: 'Spices' },
-      { name: 'Makhana (Fox nuts)', bengaliName: 'makhna', quantity: 0.5, unit: 'cup', category: 'Pantry' },
-      { name: 'Kewra water & Meetha Ittar', bengaliName: 'Kewra water & Meetha Ittar', quantity: 1, unit: 'tsp', category: 'Pantry' },
-      { name: 'Desi Ghee & White oil', bengaliName: 'Desi Ghee & White oil', quantity: 3, unit: 'tbsp', category: 'Pantry' },
-      { name: 'Boiled onion paste', bengaliName: 'Boiled onion paste', quantity: 0.5, unit: 'cup', category: 'Vegetables' }
+      { name: 'Mutton (Goat meat)', bengaliName: 'পাঁঠার মাংস', quantity: 600, unit: 'g', category: 'Fish & Meat' },
+      { name: 'Whisked yogurt (Tok doi)', bengaliName: 'টক দই', quantity: 1, unit: 'cup', category: 'Dairy & Sweets' },
+      { name: 'Cashew nut & Poppy seed paste', bengaliName: 'কাজু ও পোস্ত বাটা', quantity: 3, unit: 'tbsp', category: 'Spices' },
+      { name: 'Dry whole red chillies', bengaliName: 'আস্ত শুকনো লঙ্কা', quantity: 5, unit: 'pcs', category: 'Spices' },
+      { name: 'Makhana (Fox nuts)', bengaliName: 'মাখানা', quantity: 0.5, unit: 'cup', category: 'Pantry' },
+      { name: 'Kewra water & Meetha Ittar', bengaliName: 'কেঁওড়া জল ও মিঠা আতর', quantity: 1, unit: 'tsp', category: 'Pantry' },
+      { name: 'Desi Ghee & White oil', bengaliName: 'ঘি ও সাদা তেল', quantity: 3, unit: 'tbsp', category: 'Pantry' },
+      { name: 'Boiled onion paste', bengaliName: 'সেদ্ধ পেঁয়াজ বাটা', quantity: 0.5, unit: 'cup', category: 'Vegetables' }
     ],
     instructions: [
       'Marinate mutton with beaten curd, boiled onion paste, ginger-garlic paste, and salt for 2 hours.',
@@ -136,11 +136,50 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
     commonIngredients: ['mutton', 'yogurt', 'curd', 'cashews', 'poppy seeds', 'ghee', 'kewra']
   },
   {
- 
+    id: 'radhaballabhi',
+    name: 'Radhaballabhi',
+    bengaliName: 'রাধা বল্লভী',
+    tagline: 'Heritage puris stuffed with spicy fennel-scented black gram lentil paste.',
+    story: 'A signature Bengali breakfast delicacy closely associated with the Vaishnavite temples of Bengal. Soft deep-fried breads are filled with seasoned Biulir dal (urad lentil) flavored with roasted saunf (fennel seeds), ginger, and hing, paired exclusively with spicy Aloor Dom.',
+    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=80',
+    prepTimeMinutes: 30,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 50,
+    baseServings: 4,
+    difficulty: 'Advanced',
+    spiceLevel: 'Medium',
+    mealTypes: ['breakfast', 'snack'],
+    cuisineRegion: 'Kolkata',
+    dishType: 'Rice',
+    dietaryPreferences: ['Vegetarian'],
+    isTraditional: true,
+    season: 'Winter',
+    festivalTags: ['Sunday Breakfast', 'Temple Food'],
+    ingredients: [
+      { name: 'Maida', bengaliName: 'ময়দা', quantity: 250, unit: 'g', category: 'Pantry' },
+      { name: 'Biulir dal (Urad dal), soaked 4 hrs', bengaliName: 'বিউলির ডাল', quantity: 150, unit: 'g', category: 'Pantry' },
+      { name: 'Mouri (Fennel seeds), roasted and ground', bengaliName: 'মৌরি গুঁড়ো', quantity: 1.5, unit: 'tbsp', category: 'Spices' },
+      { name: 'Asafoetida (Hing)', bengaliName: 'হিং', quantity: 0.5, unit: 'tsp', category: 'Spices' },
+      { name: 'Ginger-green chilli paste', bengaliName: 'আদা ও কাঁচা লঙ্কা বাটা', quantity: 1, unit: 'tbsp', category: 'Spices' },
+      { name: 'Oil for frying', bengaliName: 'তেল', quantity: 2, unit: 'cup', category: 'Pantry' }
+    ],
+    instructions: [
+      'Grind soaked urad dal with minimal water into a thick, fine paste.',
+      'Sauté dal paste in 1 tbsp oil with hing, ginger-chilli paste, roasted fennel powder, and salt until it forms a dry, aromatic filling (pur). Cool completely.',
+      'Knead maida with salt, oil moyan, and water into a smooth dough. Divide into balls.',
+      'Stuff each ball with a spoonful of the spiced lentil filling, seal tightly, and roll gently into 5-inch discs.',
+      'Deep fry in hot oil until puffed up. Serve immediately with Dum Aloo or Chholar Dal.'
+    ],
+    tips: ['The stuffing must be completely dry before stuffing, otherwise the puris will burst during frying.'],
+    substitutions: ['Koraishutir Kochuri uses sweet green peas stuffing instead of urad dal.'],
+    nutrition: { calories: 310, protein: '8g', carbs: '44g', fat: '12g' },
+    storageInstructions: 'Best served straight from frying.',
+    commonIngredients: ['maida', 'urad dal', 'fennel', 'hing', 'oil']
+  },
   {
     id: 'rasgulla',
     name: 'Kolkata Rasgulla (Roshogolla)',
-    bengaliName: 'Roshogolla',
+    bengaliName: 'বাংলার রসগোল্লা',
     tagline: 'Spongy snow-white cottage cheese spheres poached in fragrant sugar syrup.',
     story: 'The globally celebrated pride of West Bengal, immortalized by confectioner Nobin Chandra Das in 1868. Spongy, feather-light spheres of freshly curdled pure cow milk chhana are cooked in boiling light sugar syrup until they expand into delicate clouds.',
     image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1000&q=80',
@@ -159,12 +198,12 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
     season: 'All-year',
     festivalTags: ['GI Tag Pride', 'Durga Puja Bijoya', 'Every Celebration'],
     ingredients: [
-      { name: 'Fresh cow milk', bengaliName: 'milk', quantity: 1, unit: 'L', category: 'Dairy & Sweets' },
-      { name: 'Lemon juice or whey for curdling', bengaliName: 'lemon juice', quantity: 2, unit: 'tbsp', category: 'Pantry' },
-      { name: 'Sugar for syrup', bengaliName: 'sugar', quantity: 1.5, unit: 'cup', category: 'Pantry' },
-      { name: 'Water for syrup', bengaliName: 'water', quantity: 5, unit: 'cup', category: 'Pantry' },
-      { name: 'Green cardamom', bengaliName: 'elaichi', quantity: 2, unit: 'pcs', category: 'Spices' },
-      { name: 'Semolina (Suji) or Maida (tiny pinch for binding)', bengaliName: 'suji', quantity: 0.5, unit: 'tsp', category: 'Pantry' }
+      { name: 'Fresh cow milk', bengaliName: 'গরুর দুধ', quantity: 1, unit: 'L', category: 'Dairy & Sweets' },
+      { name: 'Lemon juice or whey for curdling', bengaliName: 'লেবুর রস', quantity: 2, unit: 'tbsp', category: 'Pantry' },
+      { name: 'Sugar for syrup', bengaliName: 'চিনি', quantity: 1.5, unit: 'cup', category: 'Pantry' },
+      { name: 'Water for syrup', bengaliName: 'জল', quantity: 5, unit: 'cup', category: 'Pantry' },
+      { name: 'Green cardamom', bengaliName: 'ছোট এলাচ', quantity: 2, unit: 'pcs', category: 'Spices' },
+      { name: 'Semolina (Suji) or Maida (tiny pinch for binding)', bengaliName: 'সুজি', quantity: 0.5, unit: 'tsp', category: 'Pantry' }
     ],
     instructions: [
       'Boil milk, turn off flame, add diluted lemon juice, and stir until clear green whey separates.',
@@ -223,7 +262,7 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
   {
     id: 'potoler-dolma',
     name: 'Potoler Dolma',
-    bengaliName: 'potol-dolma',
+    bengaliName: 'পটলের দোলমা',
     tagline: 'Pointed gourds stuffed with spiced chhana or fish mince in rich gravy.',
     story: 'A wonderful synthesis of Armenian traders settling in 18th-century Bengal and traditional Bengali kitchen finesse. Pointed gourds (potol) are cored and stuffed with either seasoned chhana-coconut or minced fish/prawn, then braised in a luxurious gravy.',
     image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&q=80',
@@ -241,13 +280,13 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
     season: 'Summer',
     festivalTags: ['Celebration Meal', 'Summer Heritage'],
     ingredients: [
-      { name: 'Pointed gourds (Potol), scraped & hollowed', bengaliName: 'potol', quantity: 8, unit: 'pcs', category: 'Vegetables' },
-      { name: 'Fresh chhana or grated paneer', bengaliName: 'chena', quantity: 150, unit: 'g', category: 'Dairy & Sweets' },
-      { name: 'Raisins & Cashews', bengaliName: 'kaji&kismis', quantity: 2, unit: 'tbsp', category: 'Pantry' },
-      { name: 'Ginger-garlic paste', bengaliName: 'ginger garlic paste', quantity: 1.5, unit: 'tbsp', category: 'Spices' },
-      { name: 'Tomato paste', bengaliName: 'tomato paste', quantity: 0.5, unit: 'cup', category: 'Vegetables' },
-      { name: 'Mustard oil', bengaliName: 'oil', quantity: 3, unit: 'tbsp', category: 'Pantry' },
-      { name: 'Bengali Garam Masala & Ghee', bengaliName: 'Garam Masala & Ghee', quantity: 1, unit: 'tsp', category: 'Dairy & Sweets' }
+      { name: 'Pointed gourds (Potol), scraped & hollowed', bengaliName: 'পটল', quantity: 8, unit: 'pcs', category: 'Vegetables' },
+      { name: 'Fresh chhana or grated paneer', bengaliName: 'ছানা', quantity: 150, unit: 'g', category: 'Dairy & Sweets' },
+      { name: 'Raisins & Cashews', bengaliName: 'কিশমিশ ও কাজু', quantity: 2, unit: 'tbsp', category: 'Pantry' },
+      { name: 'Ginger-garlic paste', bengaliName: 'আদা-রসুন বাটা', quantity: 1.5, unit: 'tbsp', category: 'Spices' },
+      { name: 'Tomato paste', bengaliName: 'টমেটো বাটা', quantity: 0.5, unit: 'cup', category: 'Vegetables' },
+      { name: 'Mustard oil', bengaliName: 'শর্ষের তেল', quantity: 3, unit: 'tbsp', category: 'Pantry' },
+      { name: 'Bengali Garam Masala & Ghee', bengaliName: 'গরম মশলা ও ঘি', quantity: 1, unit: 'tsp', category: 'Dairy & Sweets' }
     ],
     instructions: [
       'Gently scrape the outer peel of potol. Cut one tip and scoop out interior seeds carefully using the handle of a teaspoon.',
@@ -264,9 +303,9 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
     commonIngredients: ['pointed gourd', 'potol', 'chhana', 'paneer', 'tomato', 'mustard oil']
   },
   {
-    id: 'steamed-rice',
+    id: 'steamed-bhaat',
     name: 'Garam Gobindobhog Bhaat',
-    bengaliName: 'Garam Gobindobhog Bhaat',
+    bengaliName: 'ধোঁয়া ওঠা গোবিন্দভোগ ভাত',
     tagline: 'Steaming fragrant short-grain rice, the bedrock of every Bengali meal.',
     story: 'Rice is not merely food in West Bengal—it is the very bedrock of identity, hence the ancient adage "Maachhe-Bhaate Bangali" (Fish and Rice make a Bengali). Whether paired with a dollop of golden Jharna ghee, a crunchy begun bhaja, or fiery ilish jhol, fluffy hot steamed rice completes every table.',
     image: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=1000&q=80',
@@ -284,9 +323,9 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
     season: 'All-year',
     festivalTags: ['Everyday Essential', 'Bhaat Ghum'],
     ingredients: [
-      { name: 'Gobindobhog or Basmati rice', bengaliName: 'gobindobhog', quantity: 300, unit: 'g', category: 'Pantry' },
-      { name: 'Water for boiling', bengaliName: 'boiling water', quantity: 6, unit: 'cup', category: 'Pantry' },
-      { name: 'Pure Desi Ghee (optional dollop for serving)', bengaliName: 'desi ghee', quantity: 1, unit: 'tbsp', category: 'Dairy & Sweets' }
+      { name: 'Gobindobhog or Basmati rice', bengaliName: 'গোবিন্দভোগ চাল', quantity: 300, unit: 'g', category: 'Pantry' },
+      { name: 'Water for boiling', bengaliName: 'ফোটানোর জল', quantity: 6, unit: 'cup', category: 'Pantry' },
+      { name: 'Pure Desi Ghee (optional dollop for serving)', bengaliName: 'গাওয়া ঘি', quantity: 1, unit: 'tbsp', category: 'Dairy & Sweets' }
     ],
     instructions: [
       'Rinse rice grains gently in cold water until water runs clear.',
@@ -351,7 +390,7 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
   {
     id: 'sandesh',
     name: 'Nolen Gurer Sandesh',
-    bengaliName: 'nalen gu sandesh',
+    bengaliName: 'নলেন গুড়ের সন্দেশ',
     tagline: 'Delicate melt-in-mouth cottage cheese fudge infused with date-palm jaggery.',
     story: 'The aristocratic pride of Bengali sweetmakers (Moiras). Fresh cow milk chhana is gently kneaded and slow-cooked in a kadai (paak) with liquid nolen gur and green cardamom until it reaches velvety perfection, then pressed into terracotta conch-shell moulds.',
     image: 'https://images.unsplash.com/photo-1571212515416-fef01fc43637?auto=format&fit=crop&w=1000&q=80',
@@ -369,11 +408,11 @@ export const ADDITIONAL_RECIPES: Recipe[] = [
     season: 'Winter',
     festivalTags: ['Bhai Phonta', 'Poila Boishakh', 'Durga Puja Bijoya'],
     ingredients: [
-      { name: 'Fresh homemade chhana (paneer)', bengaliName: 'chena', quantity: 300, unit: 'g', category: 'Dairy & Sweets' },
-      { name: 'Nolen Gur (Date-palm jaggery)', bengaliName: 'nolen gud', quantity: 0.5, unit: 'cup', category: 'Pantry' },
-      { name: 'Cardamom powder', bengaliName: 'eilaichi powder', quantity: 0.25, unit: 'tsp', category: 'Spices' },
-      { name: 'Ghee for greasing moulds', bengaliName: 'ghee', quantity: 1, unit: 'tsp', category: 'Dairy & Sweets' },
-      { name: 'Pistachios & Almonds for garnish', bengaliName: 'nuts', quantity: 1, unit: 'tbsp', category: 'Pantry' }
+      { name: 'Fresh homemade chhana (paneer)', bengaliName: 'তাজা নরম ছানা', quantity: 300, unit: 'g', category: 'Dairy & Sweets' },
+      { name: 'Nolen Gur (Date-palm jaggery)', bengaliName: 'নলেন গুড়', quantity: 0.5, unit: 'cup', category: 'Pantry' },
+      { name: 'Cardamom powder', bengaliName: 'ছোট এলাচ গুঁড়ো', quantity: 0.25, unit: 'tsp', category: 'Spices' },
+      { name: 'Ghee for greasing moulds', bengaliName: 'ঘি', quantity: 1, unit: 'tsp', category: 'Dairy & Sweets' },
+      { name: 'Pistachios & Almonds for garnish', bengaliName: 'পেস্তা ও বাদাম কুচি', quantity: 1, unit: 'tbsp', category: 'Pantry' }
     ],
     instructions: [
       'Knead fresh chhana on a clean board with the base of your palm for 6–8 minutes until completely smooth, silky, and free of lumps.',
