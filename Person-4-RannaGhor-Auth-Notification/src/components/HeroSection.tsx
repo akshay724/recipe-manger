@@ -44,12 +44,6 @@ export const HeroSection: React.FC = () => {
         
         {/* Main Hero Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-mustard-100 border border-mustard-300 text-sindoor-900 text-xs font-bold tracking-wide shadow-xs animate-fadeIn">
-            <span className="w-2 h-2 rounded-full bg-sindoor-600 animate-ping"></span>
-            <span>{language === 'bn' ? 'স্বাগতম RannaGhor • রান্নাঘরের ডিজিটাল সহচর' : 'Welcome to RannaGhor • Bengali Kitchen Companion'}</span>
-          </div>
-
           <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-sindoor-950 tracking-tight leading-[1.15]">
             {t('heroHeadline1')} <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sindoor-700 via-terracotta-600 to-mustard-600">
